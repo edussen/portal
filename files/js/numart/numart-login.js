@@ -1,5 +1,5 @@
 const api = "https://connect.numart.com.co"; 
-let currentEmail = "";
+let currentEmail = ""; 
 
 const loginForm = document.getElementById("loginForm");
 const twofaForm = document.getElementById("2faForm");
