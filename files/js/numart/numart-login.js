@@ -1,4 +1,4 @@
-const api = "https://connect.numart.com.co";
+const api = "https://connect.numart.com.co"; 
 let currentEmail = "";
 
 const loginForm = document.getElementById("loginForm");
