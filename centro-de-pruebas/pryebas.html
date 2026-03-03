@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    .pricing-container * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .pricing-container {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        background: white;
+        color: #111827;
+        line-height: 1.6;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+    }
+
+    .pricing-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        opacity: 0;
+        animation: fadeInDown 0.6s ease-out forwards;
+    }
+
+    .pricing-header h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #111827;
+    }
+
+    .pricing-header .highlight {
+        color: #197bc2;
+    }
+
+    .plans-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    @media (min-width: 768px) {
+        .plans-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .pricing-header h1 {
+            font-size: 3.5rem;
+        }
+    }
+
+    .plan-card {
+        position: relative;
+        border-radius: 1.5rem;
+        transition: all 0.3s ease;
+        padding: 2rem;
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+
+    .plan-card.animate-in {
+        animation: slideInUp 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .plan-card.standard {
+        background: white;
+        color: #111827;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        border: 2px solid #E5E7EB;
+    }
+
+    .plan-card.standard:hover {
+        border-color: #D1D5DB;
+        transform: translateY(-5px);
+    }
+
+    .plan-card.highlighted {
+        background: #393939;
+        color: white;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        border: 4px solid #10B981;
+    }
+
+    .plan-card.highlighted:hover {
+        transform: scale(1.08) translateY(-5px);
+    }
+
+    .badge {
+        position: absolute;
+        top: -1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #197bc2;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        white-space: nowrap;
+        z-index: 10;
+    }
+    .badge.highlighted {
+        background: #10B981;
+    }
+
+    .plan-header {
+        margin-bottom: 2rem;
+        padding-top: 1rem;
+    }
+
+    .plan-name {
+        font-size: 1.875rem;
+        font-weight: bold;
+        margin-bottom: 0.75rem;
+    }
+
+    .plan-description {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+
+    .plan-card.standard .plan-description {
+        color: #6B7280;
+    }
+
+    .plan-card.highlighted .plan-description {
+        color: #D1D5DB;
+    }
+
+    .pricing-section {
+        margin-bottom: 2rem;
+    }
+
+    .pricing-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+
+    .plan-card.standard .pricing-label {
+        color: #6B7280;
+    }
+
+    .plan-card.highlighted .pricing-label {
+        color: #9CA3AF;
+    }
+
+    .original-price {
+        font-size: 1.125rem;
+        text-decoration: line-through;
+    }
+
+    .plan-card.standard .original-price {
+        color: #9CA3AF;
+    }
+
+    .plan-card.highlighted .original-price {
+        color: #6B7280;
+    }
+
+    .current-price {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .price-amount {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .discount-badge {
+        color: #10B981;
+        border-radius: 9999px;
+        font-size: 1.25rem;
+    }
+
+    .price-details {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+
+    .plan-card.standard .price-details {
+        color: #6B7280;
+    }
+
+    .plan-card.highlighted .price-details {
+        color: #D1D5DB;
+    }
+
+    .commitment {
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    .plan-card.standard .commitment {
+        color: #374151;
+    }
+
+    .plan-card.highlighted .commitment {
+        color: #D1D5DB;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: #197bc2;
+        color: white;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button:hover {
+        background: #37acff;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+    }
+
+
+    .cta-button.highlighted {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 9999px;
+        font-weight: bold;
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: #10B981;
+        color: white;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button.highlighted:hover {
+        background: #1cdf9e;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+    }
+
+
+    .divider {
+        height: 1px;
+        margin-bottom: 2rem;
+    }
+
+    .plan-card.standard .divider {
+        background: #E5E7EB;
+    }
+
+    .plan-card.highlighted .divider {
+        background: #808080;
+    }
+
+    .features-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: start;
+        gap: 0.75rem;
+    }
+
+    .feature-icon {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.25rem;
+    }
+
+    .feature-icon.included {
+        background: #10B981;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .feature-icon.not-included.standard {
+        background: #E5E7EB;
+    }
+
+    .feature-icon.not-included.highlighted {
+        background: #1F2937;
+    }
+
+    .feature-icon svg {
+        width: 1rem;
+        height: 1rem;
+        stroke-width: 3;
+    }
+
+    .feature-icon.included svg {
+        stroke: white;
+    }
+
+    .feature-icon.not-included.standard svg {
+        stroke: #9CA3AF;
+    }
+
+    .feature-icon.not-included.highlighted svg {
+        stroke: #4B5563;
+    }
+
+    .feature-text {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+
+    .feature-text.included.standard {
+        color: #111827;
+        font-weight: 500;
+    }
+
+    .feature-text.included.highlighted {
+        color: white;
+        font-weight: 500;
+    }
+
+    .feature-text.not-included.standard {
+        color: #9CA3AF;
+        text-decoration: line-through;
+    }
+
+    .feature-text.not-included.highlighted {
+        color: #4B5563;
+        text-decoration: line-through;
+    }
+
+    .pricing-footer {
+        text-align: center;
+        margin-top: 3rem;
+        opacity: 0;
+        animation: fadeInUp 0.6s ease-out forwards;
+        animation-delay: 1.8s;
+    }
+
+    .pricing-footer p {
+        font-size: 0.875rem;
+        color: #6B7280;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px) scale(0.9);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+
+    @keyframes slideInUpHighlighted {
+        from {
+            opacity: 0;
+            transform: translateY(50px) scale(0.85);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1.05);
+        }
+    }
+</style>
+
+<div class="pricing-container">
+    <!-- Header -->
+    <div class="pricing-header">
+        <h1>Elige tu plan y <span class="highlight">empieza hoy</span></h1>
+    </div>
+
+    <!-- Plans Grid -->
+    <div class="plans-grid" id="plansGrid">
+        <!-- Los planes se generan con JavaScript -->
+    </div>
+
+    <!-- Footer Note -->
+    <div class="pricing-footer">
+        <p>*Oferta válida para nuevos miembros. Aplican términos y condiciones.</p>
+    </div>
+</div>
+
+<script>
+  (function() {
+
+    const plans = [
+
+            {
+                name: 'Plan Premium',
+                badge: 'El más ventajoso',
+                description: '',
+                originalPrice: 209900,
+                price: 104950,
+                discount: 50,
+                commitment: '12 meses de fidelidad*',
+                buttonText: '¡Empieza hoy!',
+                highlighted: true,
+                features: [
+                    { text: 'SOFIA AI (Sistema de Optimización Financiera con Inteligencia Artificial)', included: true },
+                    { text: 'API de integración', included: true },
+                    { text: 'Reportes financieros avanzados en tiempo real', included: true },
+                    { text: 'Generador de pagos en linea*', included: true },
+                    { text: 'Contabilidad completa con registro automático', included: true },
+                    { text: 'Nómina electrónica integrada y validada ante la DIAN', included: true },
+                    { text: 'Sucursales ilimitadas con control independiente*', included: true },
+                    { text: 'Hasta 5.000 empleados + 2 Contador GRATIS*', included: true },
+                    { text: 'Afiliados ilimitadas', included: true },
+                    { text: 'Hasta 8 cajas por sucursal*', included: true },
+                    { text: 'Sistema POS con control de inventario', included: true },
+                    { text: 'Ingresos ilimitados*', included: true },
+                    { text: 'Bodegas ilimitadas con gestión por ubicación', included: true },
+                    { text: 'Reportes básicos descargables en Excel y PDF', included: true },
+                    { text: 'Soporte 24/7 por chat y correo', included: true },
+                ]
+            },
+            {
+                name: 'Plan PYME',
+                badge: 'El más popular',
+                description: '',
+                originalPrice: 99900,
+                price: 49950,
+                discount: 50,
+                commitment: '12 meses de fidelidad*',
+                buttonText: '¡Comprar ya!',
+                highlighted: false,
+                features: [
+                    { text: 'SOFIA AI (Sistema de Optimización Financiera con Inteligencia Artificial)', included: false },
+                    { text: 'API de integración', included: false },
+                    { text: 'Reportes financieros avanzados en tiempo real', included: false },
+                    { text: 'Generador de pagos en linea*', included: false },
+                    { text: 'Contabilidad limitada*', included: true },
+                    { text: 'Nómina electrónica integrada y validada ante la DIAN', included: true },
+                    { text: 'Hasta 3 sucursales con control independiente*', included: true },
+                    { text: 'Hasta 500 empleados + 1 Contador GRATIS*', included: true },
+                    { text: 'Afiliados ilimitadas', included: true },
+                    { text: 'Hasta 4 cajas por sucursal*', included: true },
+                    { text: 'Sistema POS con control de inventario', included: true },
+                    { text: 'Ingresos ilimitados*', included: true },
+                    { text: 'Hasta 10 bodegas con gestión por ubicación', included: true },
+                    { text: 'Reportes básicos descargables en Excel y PDF', included: true },
+                    { text: 'Soporte 24/7 por chat y correo', included: true },
+                ]
+            },
+                        {
+                name: 'Plan Lite',
+                
+                description: '',
+                originalPrice: 69900,
+                price: 34950,
+                discount: 50,
+                commitment: '12 meses de fidelidad*',
+                buttonText: '¡Comprar ya!',
+                highlighted: false,
+                features: [
+                    { text: 'SOFIA AI (Sistema de Optimización Financiera con Inteligencia Artificial)', included: false },
+                    { text: 'API de integración', included: false },
+                    { text: 'Reportes financieros avanzados en tiempo real', included: false },
+                    { text: 'Generador de pagos en linea*', included: false },
+                    { text: 'Contabilidad limitada*', included: false },
+                    { text: 'Nómina electrónica integrada y validada ante la DIAN', included: false },
+                    { text: 'Hasta 3 sucursales con control independiente*', included: false },
+                    { text: 'Hasta 10 empleados + 1 Contador GRATIS*', included: true },
+                    { text: 'Hasta 100 Afiliados ', included: true },
+                    { text: 'Hasta 2 caja por sucursal*', included: true },
+                    { text: 'Sistema POS con control de inventario', included: true },
+                    { text: 'Ingresos ilimitados*', included: true },
+                    { text: 'Hasta 2 bodegas con gestión por ubicación', included: true },
+                    { text: 'Reportes básicos descargables en Excel y PDF', included: true },
+                    { text: 'Soporte 24/7 por chat y correo', included: true },
+                ]
+            },
+        ];
+
+    const checkIcon = `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>`;
+    const xIcon = `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+
+    function formatPrice(price) {
+        return price.toLocaleString('es-CO');
+    }
+
+    function createPlanCard(plan) {
+
+        const cardClass = plan.highlighted ? 'highlighted' : 'standard';
+
+        let featuresHTML = '';
+        plan.features.forEach(feature => {
+
+            const includedClass = feature.included ? 'included' : 'not-included';
+            const icon = feature.included ? checkIcon : xIcon;
+
+            featuresHTML += `
+                <div class="feature-item">
+                    <div class="feature-icon ${includedClass} ${cardClass}">
+                        ${icon}
+                    </div>
+                    <p class="feature-text ${includedClass} ${cardClass}">
+                        ${feature.text}
+                    </p>
+                </div>
+            `;
+        });
+
+        /* 🔥 AQUI SE AÑADE highlighted dinámicamente al BADGE */
+        const badgeHTML = plan.badge 
+            ? `<div class="badge ${cardClass}">${plan.badge}</div>` 
+            : '';
+
+        return `
+            <div class="plan-card ${cardClass}">
+                ${badgeHTML}
+                
+                <div class="plan-header">
+                    <h2 class="plan-name">${plan.name}</h2>
+                    <p class="plan-description">${plan.description}</p>
+                </div>
+
+                <div class="pricing-section">
+                    <div class="pricing-label">Desde</div>
+                    <div class="original-price">$ ${formatPrice(plan.originalPrice)}</div>
+                    <div class="current-price">
+                        <span class="price-amount">$ ${formatPrice(plan.price)}</span>
+                        <span class="discount-badge">${plan.discount}% OFF</span>
+                    </div>
+                    <div class="price-details">
+                        mensual por 3 meses, después $ ${formatPrice(plan.originalPrice)}/mes
+                    </div>
+                    <div class="commitment">${plan.commitment}</div>
+                </div>
+
+                <!-- 🔥 AQUI SE AÑADE highlighted dinámicamente al BOTÓN -->
+                <button class="cta-button ${cardClass}" onclick="handlePlanClick('${plan.name}')">
+                    ${plan.buttonText}
+                </button>
+
+                <div class="divider"></div>
+
+                <div class="features-list">
+                    ${featuresHTML}
+                </div>
+            </div>
+        `;
+    }
+
+    window.handlePlanClick = function(planName) {
+        alert(`Has seleccionado: ${planName}`);
+        console.log(`Plan seleccionado: ${planName}`);
+    };
+
+    function renderPlans() {
+        const plansGrid = document.getElementById('plansGrid');
+        
+        plans.forEach((plan, index) => {
+            plansGrid.innerHTML += createPlanCard(plan);
+        });
+
+        const cards = plansGrid.querySelectorAll('.plan-card');
+        cards.forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('animate-in');
+            }, 400 + (index * 400));
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', renderPlans);
+    } else {
+        renderPlans();
+    }
+
+})();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const texts = document.querySelectorAll(".animated-text");
+      let current = 0;
+
+      function rotateText() {
+        const currentText = texts[current];
+        currentText.classList.remove("active");
+        currentText.classList.add("exit");
+
+        current = (current + 1) % texts.length;
+        const nextText = texts[current];
+
+        nextText.classList.remove("exit");
+        nextText.classList.add("active");
+
+        // Limpiar clases después de animar
+        setTimeout(() => {
+          currentText.classList.remove("exit");
+        }, 600);
+      }
+
+      setInterval(rotateText, 3000);
+    });
+</script>
+
+</body>
+</html>

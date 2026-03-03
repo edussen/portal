@@ -1,0 +1,376 @@
+.scroll-containerHorizontal {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 30px;
+  padding: 30px 10px 40px 10px;
+
+}
+/* Contenedor para manejar el scroll */
+.custom-table-container {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+/* Estilo base de la tabla estilo "grid" */
+.custom-grid-table {
+    border-collapse: separate !important; /* Obligatorio para ver los espacios blancos */
+    border-spacing: 3px !important;      /* Grosor de las líneas blancas */
+    width: 100%;
+}
+
+/* Encabezados oscuros */
+.custom-grid-table thead th {
+    background-color: #55534E !important;
+    color: #ffffff !important;
+    text-transform: capitalize;
+    font-weight: 500;
+    padding: 12px 15px;
+    border: none !important;
+}
+
+/* Filas de la tabla */
+.custom-grid-table tbody td {
+    background-color: #F2F2F2 !important; /* Gris claro de la imagen */
+    padding: 10px 15px;
+    border: none !important;
+    color: #444;
+    vertical-align: middle;
+}
+
+/* Links y Badges */
+.text-link {
+    color: #197BC2;
+    text-decoration: underline;
+}
+
+.badge-custom {
+    padding: 5px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.activo { background-color: #d4edda; color: #155724; }
+.finalizado { background-color: #fff3cd; color: #856404; }
+.scroll-containerHorizontal::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-containerHorizontal::-webkit-scrollbar-track {
+  background: #ff0000;
+  border-radius: 8px;
+}
+
+.scroll-containerHorizontal::-webkit-scrollbar-thumb {
+  background: blue;
+  border-radius: 8px;
+}
+
+
+.main-aviso:hover {
+  background-image: linear-gradient(to bottom, #1c8adf, #1972b6);
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}
+
+.text-container {
+  text-align: left;
+  color: #474747;
+  font-size: 20px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  /* Añade espacio alrededor del texto */
+  box-sizing: border-box;
+  /* Asegura que el padding no afecte el tamaño total del contenedor */
+}
+
+.text-container2 {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  text-align: left;
+  color: #292929;
+  font-size: 15px;
+  height: 16px;
+
+}
+
+.text-container3 {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  text-align: left;
+  color: #ff0000;
+  font-size: 15px;
+  height: 16px;
+
+}
+
+.date {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #5f5f5f;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main-aviso:hover .text-container {
+  color: #ffffff;
+  /* Cambiar el color del texto al pasar el mouse */
+}
+
+.main-aviso:hover .date {
+  color: #ffffff;
+  /* Cambiar el color de la fecha al pasar el mouse */
+}
+
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 10;
+  font-size: 40px;
+}
+
+.main-aviso:hover .text-container,
+.main-aviso:hover .text-container2,
+.main-aviso:hover .text-container3,
+.main-aviso:hover .date {
+  display: none;
+}
+
+/* Aquí añadimos reglas para que los elementos aparezcan de nuevo cuando el ratón se aleje del botón */
+.main-aviso:not(:hover) .text-container,
+.main-aviso:not(:hover) .text-container2,
+.main-aviso:not(:hover) .text-container3,
+.main-aviso:not(:hover) .date {
+  display: block;
+}
+
+.main-aviso:hover .arrow-icon {
+  display: block;
+}
+
+.main-button .button-text {
+  font-size: 14px;
+  /* Tamaño del texto */
+  position: absolute;
+  bottom: -55px;
+  /* Distancia del texto desde abajo */
+  left: 25%;
+  height: 20px;
+  transform: translateX(-50%);
+  color: #474747;
+}
+
+
+.nav-linkv2 {
+  cursor: pointer;
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: 20px;
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: none;
+  border: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  border-width: 0 0rem 0.3rem 0 !important;
+
+}
+
+.nav-linkv2 {
+  background-color: #ffffff00 !important;
+  border-color: #f44336 !important;
+  border-radius: 0 !important;
+  border-width: 0 0rem 0.3rem 0 !important;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #C6DEFA;
+  color: #fff;
+  text-align: center;
+  height: 30px;
+
+}
+
+.divOculto {
+  position: fixed;
+  width: 100%;
+  height: 200px;
+  background-color: #EEF6FC;
+  display: block;
+  transition: top 0.5s;
+  /* Animación de transición solo para la propiedad top */
+  z-index: 3 !important;
+  top: -200px;
+  /* Coloca el div oculto arriba de la pantalla */
+}
+
+.main-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-image: linear-gradient(to bottom, #107ccf, #0c5f9e);
+  /* Colores del degradado */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  /* Sombra */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 80px;
+  /* Ajustar según necesites */
+  width: 80px;
+  /* Ajustar según necesites */
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  /* Transición suave */
+
+}
+
+.main-button:hover {
+  background-image: linear-gradient(to bottom, #ff7f00, #ffcc00);
+  /* Cambiar el gradiente al pasar el mouse */
+  transform: scale(1.1);
+  /* Aumentar el tamaño al pasar el mouse */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  /* Sombra más pronunciada */
+}
+
+.main-button i {
+  font-size: 30px;
+  /* Tamaño del icono */
+}
+
+.main-button .button-text {
+  font-size: 14px !important;
+  /* Tamaño del texto */
+  position: absolute !important;
+  bottom: -55px !important;
+  /* Distancia del texto desde abajo */
+  left: 25% !important;
+  height: 20px !important;
+  transform: translateX(-50%) !important;
+  color: #474747 !important;
+  margin-left: 20px !important;
+  margin-bottom: 30px !important;
+  line-height: 1 !important;
+}
+
+.button-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  /* Espacio entre los botones */
+  padding-top: 30px;
+  margin-top: 20px;
+  /* Espacio arriba del contenedor */
+  padding-bottom: 30px;
+}
+
+
+.cardv2 {
+  width: 260px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cardv2:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cardv2-image {
+  position: relative;
+  background: #f5f5f5;
+}
+
+.cardv2-image img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cardv2-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #2196F3;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.cardv2-content {
+  padding: 12px;
+}
+
+.cardv2-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.cardv2-date {
+  font-size: 12px;
+  color: #777;
+}
+
+.cardv2-new {
+  padding-top: 10px;
+  text-align: right;
+  font-size: 15px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+ /* Contenedor del ítem */
+        .menu-item-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra el texto y la línea */
+            cursor: pointer;
+        }
+
+/* Filas impares (primera, tercera, etc) */
+table.dataTable tbody tr.odd {
+    background-color: #ffffff !important;
+}
+
+/* Filas pares (segunda, cuarta, etc) */
+table.dataTable tbody tr.even {
+    background-color: #f1f1f1 !important;
+}

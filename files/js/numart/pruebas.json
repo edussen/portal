@@ -1,0 +1,41 @@
+{
+  "bodegas": [
+    {
+      "id": 1,
+      "name": "Principal",
+      "status": true,
+      "items": [
+        {
+          "id": 1,
+          "item_type": "product",
+          "name": "Producto generico",
+          "measurement_unit": 97,
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.",
+          "group": "Papeleria",
+          "base_price": 100,
+          "tax": "none",
+          "inicial_price": 80,
+          "stock": 0,
+          "barcode": null,
+          "active": true
+        },
+        {
+          "inventario": {
+            "ver_items": true,
+            "ver_precio": false,
+            "ver_cantidad": true,
+            "añadir_productos": false,
+            "eliminar_productos": false,
+            "editar_nombre": false,
+            "editar_unidad_de_medida": false,
+            "editar_bodega": false,
+            "editar_precio": false,
+            "editar_impuesto": false,
+            "editar_codigo_de_barras": false,
+            "editar_imagen": false
+          }
+        }
+      ]
+    }
+  ]
+}

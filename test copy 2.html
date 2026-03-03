@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Tabla Profesional con Skeleton Real</title>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+<style>
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f3f4f6;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+/* TABLA */
+#tableInventory {
+    width: 100% !important;
+    border-collapse: collapse;
+}
+
+#tableInventory th {
+    background: #f8fafc;
+    padding: 14px;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: left;
+}
+
+#tableInventory td {
+    padding: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+#tableInventory tbody tr {
+    transition: 0.2s ease;
+}
+
+#tableInventory tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* Animación filas reales */
+.fade-in {
+    animation: fadeInUp 0.4s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+}
+
+/* BOTÓN */
+.btn-edit {
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid #3b82f6;
+    background: white;
+    color: #3b82f6;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-edit:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* -------- SKELETON OVERLAY -------- */
+.skeleton-overlay {
+    position: absolute;
+    inset: 0;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    z-index: 10;
+}
+
+.skeleton-row {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.skeleton-box {
+    height: 14px;
+    border-radius: 6px;
+    background: linear-gradient(
+        90deg,
+        #eeeeee 25%,
+        #e0e0e0 50%,
+        #eeeeee 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Spinner centro */
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 4px solid #e0e0e0;
+    border-top: 4px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -18px;
+    margin-left: -18px;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="skeleton-overlay" id="skeleton">
+    <!-- Filas falsas -->
+    <div class="skeleton-row">
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+    </div>
+
+    <div class="skeleton-row">
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+        <div class="skeleton-box"></div>
+    </div>
+
+    <div class="spinner"></div>
+</div>
+
+<table id="tableInventory">
+    <thead>
+        <tr>
+            <th>Tipo</th>
+            <th>Nombre</th>
+            <th>Código</th>
+            <th>Unidad</th>
+            <th>Precio</th>
+            <th>Impuestos</th>
+            <th>Stock</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="fade-in">
+            <td>Producto</td>
+            <td>COLORES PAPER MATE</td>
+            <td>49.38</td>
+            <td>unidad</td>
+            <td>$4,500 COP</td>
+            <td>19%</td>
+            <td>-6</td>
+            <td>Activo</td>
+            <td><button class="btn-edit">Editar</button></td>
+        </tr>
+        <tr class="fade-in">
+            <td>Producto</td>
+            <td>VESTIDO ZAMARA</td>
+            <td>49.36</td>
+            <td>unidad</td>
+            <td>$56,000 COP</td>
+            <td>19%</td>
+            <td>12</td>
+            <td>Activo</td>
+            <td><button class="btn-edit">Editar</button></td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+    $('#tableInventory').DataTable({
+        searching: true,
+        paging: true,
+        info: false,
+        lengthChange: false
+    });
+
+    // Simula carga
+    setTimeout(() => {
+        $('#skeleton').fadeOut(400);
+    }, 2000);
+
+});
+</script>
+
+</body>
+</html>

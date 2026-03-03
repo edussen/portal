@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <!-- Title -->
+    <title>Inicia sesión con tu Numart ID</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" href="https://pub-03d0689f896f4c1b96c0eadaaff42219.r2.dev/favicon.ico">
+    <link href="/files/css/style.css" rel="stylesheet">
+    <style>
+        .containerv2 {
+            display: flex;
+            height: 100vh;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* PANEL IZQUIERDO */
+        .login-panel {
+            width: 550px;
+            background: #0f0f10;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-panel h1 {
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        input {
+            background: #1c1c1e;
+            border: 1px solid #333;
+            border-radius: 6px;
+            padding: 12px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        .primary-btn {
+            background: #197BC2;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .primary-btn:hover {
+            background: #10507e;
+        }
+
+        .forgot {
+            margin: 20px 0;
+            font-size: 13px;
+            color: #9ca3af;
+            text-decoration: none;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 20px 0;
+            color: #666;
+        }
+
+        .secondary-btn {
+            background: #1f2933;
+            border: 1px solid #333;
+            padding: 10px;
+            border-radius: 6px;
+            color: #e5e7eb;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .secondary-btn:hover {
+            background: #27303b;
+        }
+
+        .register {
+            margin-top: auto;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        .register a {
+            color: #197BC2;
+            text-decoration: none;
+        }
+
+        /* PANEL DERECHO */
+        .visual-panel {
+            flex: 1;
+            background: radial-gradient(circle at top, #111, #000);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cards {
+            position: absolute;
+            inset: 0;
+        }
+
+        .card {
+            width: 140px;
+            height: 140px;
+            background: linear-gradient(135deg, #2a2a2a, #111);
+            border-radius: 12px;
+            position: absolute;
+            transform: rotate(10deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .6);
+        }
+
+        .card:nth-child(1) {
+            top: 10%;
+            left: 20%;
+        }
+
+        .card:nth-child(2) {
+            top: 30%;
+            left: 50%;
+        }
+
+        .card:nth-child(3) {
+            top: 60%;
+            left: 30%;
+        }
+
+        .card:nth-child(4) {
+            top: 20%;
+            left: 70%;
+        }
+
+        .card:nth-child(5) {
+            top: 55%;
+            left: 60%;
+        }
+
+        .card:nth-child(6) {
+            top: 75%;
+            left: 80%;
+        }
+
+        
+    </style>
+</head>
+
+
+<body class="h-100">
+    <div class="containerv2">
+
+        <aside class="login-panel" id="loginBox">
+            <img style="background-size: 160px 90px;width: 160px;height: 125px;padding-bottom: 40px"
+                src="https://imagenes.numart.com.co/NUMART%20TEXT%20v3.png" alt="">
+            <h1 style="color: #fff;font-weight: bold;">Iniciar sesión</h1>
+            <p class="subtitle">Tu próximo gran paso empieza aquí.</p>
+            <form id="loginForm" action="index.html">
+                <div class="form-group">
+                    <label style="color: #fff;font-weight: 600;" class="mb-1">Correo</label>
+                    <input type="email" class="form-control" id="dz-email" value="mrluki4656@gmail.com"
+                        style="background: #1c1c1e;border: 0.1px solid #888888;color: #fff;">
+                </div>
+
+                <div class="form-group position-relative">
+                    <label style="color: #fff;font-weight: 600;" class="mb-1">Contraseña</label>
+                    <input type="password" id="dz-password" class="form-control" value="1"
+                        style="background: #1c1c1e;border: 0.1px solid #888888;color: #fff;">
+                    <span class="show-pass eye">
+
+                        <i style="color: #c7c7c7;" class="fa fa-eye-slash"></i>
+                        <i style="color: #c7c7c7;" class="fa fa-eye"></i>
+
+                    </span>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block">CONTINUAR</button>
+                </div>
+
+            
+            </form>
+             <a  href="/seguridad/restablecer-cuenta/" class="forgot">¿Olvidaste la contraseña o el nombre de
+                    usuario?</a>
+
+                <div class="divider">O</div>
+                <div class="text-center">
+                    <a href="/" type="submit" class="btn light btn-primary btn-block">INICIO DE SESIÓN RÁPIDO</a>
+                </div>
+
+                <p style="padding-top: 30px;" class="register">
+                    ¿No tienes una cuenta? <a href="#">Contacta al soporte</a>
+                </p>
+
+
+        </aside>
+        <aside style="display: none;" class="login-panel" id="qrBox">
+            <img style="background-size: 160px 90px;width: 160px;height: 125px;padding-bottom: 40px"
+                src="https://imagenes.numart.com.co/NUMART%20TEXT%20v3.png">
+            <h1 style="color: #fff;font-weight: bold;">Authenticator Setup</h1>
+<p id="codeBox" style="display: none;" class="subtitle">Escanee el código QR de abajo en su aplicación de autenticación, luego ingrese el código generado abajo a continuación.</p>
+            <div id="image-text-center" class="text-center mb-3">
+                <img id="qrImg"><br><br>
+            </div>
+            <p class="subtitle">Ingresa el código generado por la aplicación de autenticación.</p>
+            
+
+
+            <form id="2faForm">
+                <div class="form-group position-relative">
+                    <label style="color: #fff;font-weight: 600;" class="mb-1">Code</label>
+                    <input type="2fa" id="dz-2fa" class="form-control" placeholder="Enter 6-digit Code"
+                        style="background: #1c1c1e;border: 0.1px solid #888888;color: #fff;">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-block">INICIAR
+                        SESIÓN</button>
+                </div>
+                            <p style="text-align: center;padding-top: 30px;" class="register">
+                IMPORTANTE: No compartas tus códigos de seguridad con nadie. Numart o sus afiliados nunca te pedirá que
+                compartas tus códigos, ni por mensajes de texto, ni compartiendo pantalla, etc.
+            </p>
+            </form>
+
+
+        </aside>
+
+        <main class="visual-panel">
+            <div class="cards">
+                <img style="width: 100%;height: 100%;object-fit: cover;opacity: 0.5"
+                    src="https://imagenes.numart.com.co/eec22090-918b-4800-9535-3d62e6635fe6.png" alt="">
+            </div>
+        </main>
+
+    </div>
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="/files/vendor/global/global.min.js"></script>
+    <script src="/files/js/custom.min.js"></script>
+    <script src="/files/js/deznav-init.js"></script>
+    <script src="/files/js/numart/numart-login.js"></script>
+
+    <script src="/files/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="/files/js/plugins-init/sweetalert.init.js"></script>
+
+</body>
+
+</html>

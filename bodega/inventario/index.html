@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Title -->
+	<title>Inventario - Numart</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="author" content="DexignZone">
+	<meta name="robots" content="">
+	<meta name="format-detection" content="telephone=no">
+	<!-- Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" href="https://imagenes.numart.com.co/favicon.ico">
+	<link href="/files/vendor/jqvmap/css/jqvmap.min.css" rel="stylesheet">
+	<link href="/files/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="/files/vendor/chartist/css/chartist.min.css">
+	<link href="/files/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="/files/css/style.css" rel="stylesheet">
+	<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+	<link href="/files/css/numart.css" rel="stylesheet">
+	<link href="/files/css/numart-table.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!--*******************
+        Preloader start
+    ********************-->
+	<div id="preloader">
+		<div class="sk-three-bounce">
+			<div class="sk-child sk-bounce1"></div>
+			<div class="sk-child sk-bounce2"></div>
+			<div class="sk-child sk-bounce3"></div>
+		</div>
+	</div>
+	<!--*******************
+        Preloader end
+    ********************-->
+
+	<!--**********************************
+        Main wrapper start
+    ***********************************-->
+	<div id="main-wrapper">
+
+
+
+		<!--**********************************
+            Chat box start
+        ***********************************-->
+		<div class="chatbox">
+			<div class="chatbox-close"></div>
+			<div class="custom-tab-1">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#notes">Notes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#alerts">Alerts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" data-bs-toggle="tab" href="#chat">Chat</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active show" id="chat" role="tabpanel">
+						<div class="card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" />
+											<rect fill="#000000" opacity="0.3"
+												transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
+												x="4" y="11" width="16" height="2" rx="1" />
+										</g>
+									</svg></a>
+								<div>
+									<h6 class="mb-1">Chat List</h6>
+									<p class="mb-0">Show All</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<circle fill="#000000" cx="5" cy="12" r="2" />
+											<circle fill="#000000" cx="12" cy="12" r="2" />
+											<circle fill="#000000" cx="19" cy="12" r="2" />
+										</g>
+									</svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll  " id="DZ_W_Contacts_Body">
+								<ul class="contacts">
+									<li class="name-first-letter">A</li>
+									<li class="active dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Archie Parker</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Alfie Mason</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/3.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>AharlieKane</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/4.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">B</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/5.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Bashid Samim</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Breddie Ronan</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Ceorge Carson</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">D</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/3.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Darry Parker</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/4.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Denry Hunter</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">J</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/5.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Jack Ronan</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Jacob Tucker</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>James Logan</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/3.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Joshua Weston</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">O</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/4.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Oliver Acker</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/5.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Oscar Weston</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card chat dz-chat-history-box d-none">
+							<div class="card-header chat-list-header text-center">
+								<a href="#" class="dz-chat-history-back">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<polygon points="0 0 24 0 24 24 0 24" />
+											<rect fill="#000000" opacity="0.3"
+												transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) "
+												x="14" y="7" width="2" height="10" rx="1" />
+											<path
+												d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z"
+												fill="#000000" fill-rule="nonzero"
+												transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) " />
+										</g>
+									</svg>
+								</a>
+								<div>
+									<h6 class="mb-1">Chat with Khelesh</h6>
+									<p class="mb-0 text-success">Online</p>
+								</div>
+								<div class="dropdown">
+									<a href="#" data-bs-toggle="dropdown" aria-expanded="false"><svg
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+											viewBox="0 0 24 24" version="1.1">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<rect x="0" y="0" width="24" height="24" />
+												<circle fill="#000000" cx="5" cy="12" r="2" />
+												<circle fill="#000000" cx="12" cy="12" r="2" />
+												<circle fill="#000000" cx="19" cy="12" r="2" />
+											</g>
+										</svg></a>
+									<ul class="dropdown-menu dropdown-menu-end">
+										<li class="dropdown-item"><i class="fas fa-user-circle text-primary me-2"></i>
+											View profile</li>
+										<li class="dropdown-item"><i class="fas fa-users text-primary me-2"></i> Add to
+											close friends</li>
+										<li class="dropdown-item"><i class="fas fa-plus text-primary me-2"></i> Add to
+											group</li>
+										<li class="dropdown-item"><i class="fas fa-ban text-primary me-2"></i> Block
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Hi, how are you samim?
+										<span class="msg_time">8:40 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Hi Khalid i am good tnx how about you?
+										<span class="msg_time_send">8:55 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am good too, thank you for your chat template
+										<span class="msg_time">9:00 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										You are welcome
+										<span class="msg_time_send">9:05 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am looking for your next templates
+										<span class="msg_time">9:07 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Ok, thank you have a good day
+										<span class="msg_time_send">9:10 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Bye, see you
+										<span class="msg_time">9:12 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Hi, how are you samim?
+										<span class="msg_time">8:40 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Hi Khalid i am good tnx how about you?
+										<span class="msg_time_send">8:55 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am good too, thank you for your chat template
+										<span class="msg_time">9:00 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										You are welcome
+										<span class="msg_time_send">9:05 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am looking for your next templates
+										<span class="msg_time">9:07 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Ok, thank you have a good day
+										<span class="msg_time_send">9:10 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Bye, see you
+										<span class="msg_time">9:12 AM, Today</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer type_msg">
+								<div class="input-group">
+									<textarea class="form-control" placeholder="Type your message..."></textarea>
+									<div class="input-group-append">
+										<button type="button" class="btn btn-primary"><i
+												class="fas fa-location-arrow"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="alerts" role="tabpanel">
+						<div class="card mb-sm-3 mb-md-0 contacts_card">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<circle fill="#000000" cx="5" cy="12" r="2" />
+											<circle fill="#000000" cx="12" cy="12" r="2" />
+											<circle fill="#000000" cx="19" cy="12" r="2" />
+										</g>
+									</svg></a>
+								<div>
+									<h6 class="mb-1">Notications</h6>
+									<p class="mb-0">Show All</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<path
+												d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+												fill="#000000" fill-rule="nonzero" opacity="0.3" />
+											<path
+												d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+												fill="#000000" fill-rule="nonzero" />
+										</g>
+									</svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body1">
+								<ul class="contacts">
+									<li class="name-first-letter">SEVER STATUS</li>
+									<li class="active">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont primary">KK</div>
+											<div class="user_info">
+												<span>David Nester Birthday</span>
+												<p class="text-primary">Today</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">SOCIAL</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont success">RU<i class="icon fa-birthday-cake"></i></div>
+											<div class="user_info">
+												<span>Perfection Simplified</span>
+												<p>Jame Smith commented on your status</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">SEVER STATUS</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont primary">AU<i class="icon fas fa-user-plus"></i></div>
+											<div class="user_info">
+												<span>AharlieKane</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont info">MO<i class="icon fas fa-user-plus"></i></div>
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer"></div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="notes">
+						<div class="card mb-sm-3 mb-md-0 note_card">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" />
+											<rect fill="#000000" opacity="0.3"
+												transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
+												x="4" y="11" width="16" height="2" rx="1" />
+										</g>
+									</svg></a>
+								<div>
+									<h6 class="mb-1">Notes</h6>
+									<p class="mb-0">Add New Nots</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<path
+												d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+												fill="#000000" fill-rule="nonzero" opacity="0.3" />
+											<path
+												d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+												fill="#000000" fill-rule="nonzero" />
+										</g>
+									</svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
+								<ul class="contacts">
+									<li class="active">
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>New order placed..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>Youtube, a video-sharing website..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>john just buy your product..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+            Chat box End
+        ***********************************-->
+
+		<!--**********************************
+            Header start
+        ***********************************-->
+		<div class="numart-header"></div>
+		<!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+		<!--**********************************
+            Sidebar start
+        ***********************************-->
+		<div class="deznav">
+			<div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+
+					<li><a href="/" class="ai-icon" aria-expanded="false">
+							<i class="flaticon-dashboard"></i>
+							<span class="nav-text">Principal</span>
+						</a>
+					</li>
+
+					<li id="misDatos_menu">
+						<a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+							<i class="fa fa-chart-line"></i>
+							<span class="nav-text">Mis datos</span>
+						</a>
+						<div class="menu-item-container">
+							<div class="linea-inferior"></div>
+						</div>
+						<ul aria-expanded="false">
+							<li>
+								<a href="/mis-datos/informacion-personal">
+									<i class="minus fa fa-minus" style="font-size: 10px;"></i> Información personal
+								</a>
+							</li>
+							<li id="mis-claves">
+								<a href="/mis-datos/mis-claves">
+									<i class="minus fa fa-minus" style="font-size: 10px;"></i> Mis claves
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li id="misMensajes_menu">
+						<a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+							<i class="fa fa-comment"></i>
+							<span class="nav-text">Mis mensajes</span>
+						</a>
+						<div class="menu-item-container">
+							<div class="linea-inferior"></div>
+						</div>
+						<ul aria-expanded="false">
+							<li><a href="/mis-mensajes/redactar-mensaje"><i class="minus fa fa-minus"
+										style="font-size: 10px;"></i> Redactar mensaje</a></li>
+							<li><a href="/mis-mensajes/"><i class="minus fa fa-minus" style="font-size: 10px;"></i>
+									Bandeja de entrada</a></li>
+							<li><a href="/mis-mensajes/mis-listas-de-distribucion"><i class="minus fa fa-minus"
+										style="font-size: 10px;"></i> Listas de distribución</a></li>
+						</ul>
+					</li>
+
+					<li id="misReuniones_menu">
+						<a href="/mis-reuniones/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-user-tie"></i>
+							<span class="nav-text">Mis reuniones</span>
+						</a>
+					</li>
+
+					<li id="misAutorizaciones_menu">
+						<a href="/mis-autorizaciones/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-volleyball-ball"></i>
+							<span class="nav-text">Mis autorizaciones</span>
+						</a>
+					</li>
+
+					<li id="misTareas_menu">
+						<a href="/mis-tareas/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-book"></i>
+							<span class="nav-text">Mis tareas</span>
+							<span class="badge badge-sm badge-danger ms-3">New</span>
+						</a>
+					</li>
+
+					<li id="miAgenda_menu">
+						<a href="/mi-agenda/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-calendar"></i>
+							<span class="nav-text">Mi agenda</span>
+						</a>
+					</li>
+
+					<li id="miNomina_menu">
+						<a href="/mi-nomina/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-dollar-sign"></i>
+							<span class="nav-text">Mi nomina</span>
+						</a>
+					</li>
+
+					<li class="laboralYear"
+						style="background-color: #197BC2; color: #fff; height: 45px; font-size: 15px; display: flex; justify-content: center; align-items: center;">
+						Año laboral 2026
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<!--**********************************
+            Sidebar end
+        ***********************************-->
+
+		<!--**********************************
+            Content body start
+        ***********************************-->
+		<div class="content-body">
+
+			<!-- row -->
+			<div class="container-fluid">
+				<div class="row page-titles mx-0">
+					<div class="col-sm-6 p-md-0" style="display: flex; flex-direction: row;align-items: center;">
+						<i class="fa fa-box" style="font-size: 55px;margin-right: 15px;color: #197BC2;"
+							aria-hidden="true"></i>
+						<div class="welcome-text">
+							<p style="font-weight: bolder;font-size: 30px;color: #5c5c5c;margin-bottom: 0rem">
+								Inventario
+							</p>
+							<h4 style="color: #5c5c5c;font-size: 20px;">Gestiona tu inventario
+							</h4>
+						</div>
+					</div>
+					<div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+						<ol class="breadcrumb"
+							style="background-color: #e5f4ff;font-size: 1.2875rem;padding: 1rem;border-radius: 15px;">
+							<li class="breadcrumb-item"><a href="/bodega/inventario/">Bodega</a></li>
+							<li class="breadcrumb-item active"><a href="javascript:void(0)">Inventario</a></li>
+						</ol>
+					</div>
+				</div>
+				<!--<div class="form-head d-flex mb-4 align-items-start">
+					<div class="input-group search-area d-inline-flex">
+						<input type="text" class="form-control" placeholder="Search here">
+						<div class="input-group-append">
+							<span class="input-group-text"><i class="fas fa-search"></i></span>
+						</div>
+					</div>
+					<div class="dropdown ms-auto d-inline-block">
+						<div class="btn btn-outline-primary btn-rounded dropdown-toggle" data-bs-toggle="dropdown">
+							<svg class="me-3" width="28" height="28" viewBox="0 0 28 28" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0)">
+									<path
+										d="M22.4276 2.856H21.8676V1.428C21.8676 0.56 21.2796 0 20.4396 0C19.5996 0 19.0116 0.56 19.0116 1.428V2.856H9.71557V1.428C9.71557 0.56 9.15557 0 8.28757 0C7.41957 0 6.85957 0.56 6.85957 1.428V2.856H5.57157C2.85557 2.856 0.55957 5.152 0.55957 7.868V23.016C0.55957 25.732 2.85557 28.028 5.57157 28.028H22.4276C25.1436 28.028 27.4396 25.732 27.4396 23.016V7.868C27.4396 5.152 25.1436 2.856 22.4276 2.856ZM5.57157 5.712H22.4276C23.5756 5.712 24.5836 6.72 24.5836 7.868V9.856H3.41557V7.868C3.41557 6.72 4.42357 5.712 5.57157 5.712ZM22.4276 25.144H5.57157C4.42357 25.144 3.41557 24.136 3.41557 22.988V12.712H24.5556V22.988C24.5836 24.136 23.5756 25.144 22.4276 25.144Z"
+										fill="#EA4989"></path>
+								</g>
+								<defs>
+									<clipPath id="clip0">
+										<rect width="28" height="28" fill="white"></rect>
+									</clipPath>
+								</defs>
+							</svg>
+							Today
+						</div>
+						<div class="dropdown-menu dropdown-menu-left">
+							<a class="dropdown-item" href="#">A To Z List</a>
+							<a class="dropdown-item" href="#">Z To A List</a>
+						</div>
+					</div>
+
+				</div>-->
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="table-responsive">
+							<div class="row">
+
+								<div class="card-body"
+									style="display: flex;justify-content: right;background-color: #ffffff00;">
+									<a style="margin-right: 10px;" href="importar/" class="btn btn-primary">IMPORTAR
+										ÍTEMS</a>
+
+									<button style="margin-right: 10px;" type="button" data-bs-toggle="modal"
+										data-bs-target="#exampleModalCenter" class="btn light btn-primary">AÑADIR
+										ÍTEM</button>
+
+									<!-- Modal -->
+									<div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-hidden="true">
+										<div class="modal-dialog modal-lg" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title">Añadir producto</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal"
+														aria-label="Close"></button>
+												</div>
+
+												<div class="modal-body">
+													<div class="row">
+														<div class="col-xl-12 col-xxl-12 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Tipo de ítem<i style="color: #197BC2;">*</i>
+															</label>
+															<div style="margin-bottom: 10px !important;"
+																class="mb-3 mb-0">
+																<div class="form-check d-inline-block">
+																	<input checked class="form-check-input" type="radio"
+																		name="flexRadioDefault" id="flexRadioDefault4">
+																	<label class="form-check-label"
+																		for="flexRadioDefault4">
+																		Producto
+																	</label>
+																</div>
+																<div class="form-check d-inline-block mx-2">
+																	<input class="form-check-input" type="radio"
+																		name="flexRadioDefault" id="flexRadioDefault5">
+																	<label class="form-check-label"
+																		for="flexRadioDefault5">
+																		Servicio
+																	</label>
+																</div>
+																<div class="form-check d-inline-block">
+																	<input class="form-check-input" type="radio"
+																		name="flexRadioDefault" id="flexRadioDefault6">
+																	<label class="form-check-label"
+																		for="flexRadioDefault6">
+																		Combo
+																	</label>
+																</div>
+
+															</div>
+															<label style="font-size: 12px;" class="form-label">
+																<i style="color:#197BC2;padding-right:5px;padding-left:3px"
+																	class="fa fa-question"></i> AVISO: Esta categoria no
+																podra ser modificada una vez creado y verificado el
+																ítem.
+															</label>
+														</div>
+													</div>
+													<div class="row" style="margin-top: 20px;">
+														<div class="col-xl-6 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Nombre <i style="color: #197BC2;">*</i>
+															</label>
+															<input id="rol_nombre" type="text" class="form-control"
+																required>
+														</div>
+														<div class="col-xl-6 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Unidad de medida <i style="color: #197BC2;">*</i>
+															</label>
+															<select id="unidad_de_medida"
+																class="default-select  form-control wide" required>
+																<option value="" disabled="">Seleccione unidad de medida
+																</option>
+																<option selected value="Unidad">Unidad</option>
+															</select>
+														</div>
+													</div>
+													<div class="row">
+
+														<div class="col-xl-12 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Bodega <i style="color: #197BC2;">*</i>
+															</label>
+															<select id="unidad_de_medida"
+																class="default-select  form-control wide" required>
+																<option value="" disabled="">Seleccione Bodega
+																</option>
+																<option selected value="Unidad">Principal</option>
+															</select>
+														</div>
+														<div class="col-xl-12 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Grupo <i style="color: #197BC2;">*</i>
+															</label>
+															<select id="grupo" class="default-select  form-control wide"
+																required>
+																<option value="" disabled="">Seleccione el grupo
+																</option>
+																<option selected value="papeleria">Papeleria</option>
+															</select>
+														</div>
+													</div>
+													<div class="row">
+
+
+
+
+														<div class="col-xl-4 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Precio base <i style="color: #197BC2;">*</i>
+															</label>
+															<input id="rol_nombre" type="text" class="form-control"
+																required>
+														</div>
+														<div class="col-xl-4 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Impuesto <i style="color: #197BC2;">*</i>
+															</label>
+															<select id="unidad_de_medida"
+																class="default-select  form-control wide" required>
+																<option value="" disabled="">Seleccione impuesto
+																</option>
+																<option selected value="ninguna">Ninguna (0%)
+																</option>
+																<option value="iva0">IVA (0%)
+																</option>
+																<option value="iva5">IVA (5%)
+																</option>
+																<option value="iva19">IVA (19%)
+																</option>
+															</select>
+														</div>
+														<div class="col-xl-4 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Precio final <i style="color: #197BC2;">*</i>
+															</label>
+															<input id="rol_nombre" type="text" class="form-control"
+																required disabled>
+														</div>
+													</div>
+													<div class="row">
+
+
+
+
+														<div class="col-xl-6 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Precio inicial <i style="color: #197BC2;">*</i>
+															</label>
+															<input id="rol_nombre" type="text" class="form-control"
+																required>
+														</div>
+
+														<div class="col-xl-6 mb-3">
+															<label for="rol_nombre" class="form-label">
+																Cantidad inicial <i style="color: #197BC2;">*</i>
+															</label>
+															<input id="rol_nombre" type="text" class="form-control"
+																required>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-xl-12">
+															<div class="form-check">
+																<input class="form-check-input" type="checkbox"
+																	id="rol_activo" checked>
+																<label class="form-check-label" for="rol_activo">
+																	Activo
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="modal-footer">
+													<button type="button" id="btnGuardarRol"
+														class="btn btn-primary">GUARDAR
+														CAMBIOS</button>
+													<button type="button" class="btn btn-dark"
+														data-bs-dismiss="modal">CERRAR</button>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<!--SI SE CIERRA ALGUNO DE ESOS ABRA DENUEVO EL MODAL PRICIPAL-->
+
+
+
+
+							</div>
+							<div class="container-table">
+								<!-- Header -->
+								<div class="header-card">
+									<div class="header-content">
+										<!-- Búsqueda -->
+										<div class="search-section">
+											<div class="search-wrapper">
+												<svg class="search-icon" width="16" height="16" viewBox="0 0 24 24"
+													fill="none" stroke="currentColor" stroke-width="2">
+													<circle cx="11" cy="11" r="8"></circle>
+													<path d="m21 21-4.35-4.35"></path>
+												</svg>
+												<input type="text" id="searchInput" class="search-input"
+													placeholder="Buscar producto o servicio" />
+											</div>
+											<button class="btn-filter">
+												<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+													stroke="currentColor" stroke-width="2">
+													<line x1="4" x2="4" y1="21" y2="14"></line>
+													<line x1="4" x2="4" y1="10" y2="3"></line>
+													<line x1="12" x2="12" y1="21" y2="12"></line>
+													<line x1="12" x2="12" y1="8" y2="3"></line>
+													<line x1="20" x2="20" y1="21" y2="16"></line>
+													<line x1="20" x2="20" y1="12" y2="3"></line>
+													<line x1="2" x2="6" y1="14" y2="14"></line>
+													<line x1="10" x2="14" y1="8" y2="8"></line>
+													<line x1="18" x2="22" y1="16" y2="16"></line>
+												</svg>
+												Filtros
+											</button>
+										</div>
+
+										<!-- Acciones -->
+										<div class="actions-section">
+											<button class="btn-icon">
+												<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+													stroke="currentColor" stroke-width="2">
+													<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path>
+													<path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path>
+												</svg>
+											</button>
+											<button class="btn-outline" id="addRowBtn">
+												<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+													stroke="currentColor" stroke-width="2">
+													<path d="M5 12h14"></path>
+													<path d="M12 5v14"></path>
+												</svg>
+												Añadir Fila
+											</button>
+											<button class="btn-outline" id="addColumnBtn">
+												<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+													stroke="currentColor" stroke-width="2">
+													<path d="M5 12h14"></path>
+													<path d="M12 5v14"></path>
+												</svg>
+												Añadir Columna
+											</button>
+											<button class="btn-primary">Crear / Importar</button>
+										</div>
+									</div>
+								</div>
+
+								<!-- Tabla -->
+								<div class="table-card">
+									<div class="table-wrapper">
+										<table class="table" id="productTable">
+											<thead id="tableHead">
+												<!-- Se genera dinámicamente con JS -->
+											</thead>
+											<tbody id="tableBody">
+												<!-- Se genera dinámicamente con JS -->
+											</tbody>
+										</table>
+									</div>
+
+									<!-- Paginación -->
+									<div class="pagination">
+										<div class="pagination-left">
+											<span>Filas por página:</span>
+											<select id="itemsPerPage" class="pagination-select">
+												<option value="5">5</option>
+												<option value="10" selected>10</option>
+												<option value="20">20</option>
+												<option value="50">50</option>
+											</select>
+										</div>
+
+										<div class="pagination-right">
+											<span id="paginationInfo">1 a 10 de 10</span>
+											<div class="pagination-controls">
+												<button class="btn-nav" id="prevPage">
+													<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2">
+														<path d="m15 18-6-6 6-6"></path>
+													</svg>
+												</button>
+												<span id="pageInfo">Página 1 de 1</span>
+												<button class="btn-nav" id="nextPage">
+													<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+														stroke="currentColor" stroke-width="2">
+														<path d="m9 18 6-6-6-6"></path>
+													</svg>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<table id="tableInventory" class="display mb-4 dataTablesCard">
+								<thead>
+									<tr>
+										<th><strong class="font-w600 wspace-no">Nombre</strong></th>
+										<th><strong class="font-w600">Tipo</strong></th>
+										<th><strong class="font-w600">Precio</strong></th>
+										<th><strong class="font-w600">Cantidad</strong></th>
+										<th><strong class="font-w600 wspace-no">Estado</strong></th>
+										<th><strong class="font-w600">Acción</strong></th>
+
+
+									</tr>
+								</thead>
+								<tbody>
+
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+            Content body end
+        ***********************************-->
+
+		<!--**********************************
+            Footer start
+        ***********************************-->
+		<div class="footer">
+			<div class="copyright">
+				<p>© 2026 Copyright <a href="http://numart.com.co/" target="_blank">Numart</a></p>
+			</div>
+		</div>
+		<!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+	</div>
+	<!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+	<!--**********************************
+        Scripts
+    ***********************************-->
+	<!-- Required vendors -->
+
+
+	<script src="/files/vendor/global/global.min.js"></script>
+	<script src="/files/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="/files/js/custom.min.js"></script>
+	<script src="/files/js/deznav-init.js"></script>
+
+	<!-- Datatable -->
+	<script src="/files/vendor/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="/files/js/numart/main.js"></script>
+	<script src="/files/js/numart/numart-table.js"></script>
+	<script>verificarPermiso(localStorage.getItem("token"), "ventas.inventario.ver_items");</script>
+	<script>returnConfidencialInfo(localStorage.getItem("token"), JSON.parse(localStorage.getItem('userInfo')).codigo_centro, "storeRoomList")</script>
+
+	<script>
+		addColumn([
+			{ label: 'Nombre', key: 'nombre', editable: true, type: 'text' },
+			{ label: 'Tipo', key: 'tipo', editable: false },
+			{ label: 'Unidad', key: 'unidad', editable: false },
+			{ label: 'Precios', key: 'precio', editable: true, type: 'price' },
+			{ label: 'Impuestos', key: 'impuestos', editable: true, type: 'select' },
+			{ label: 'Stock', key: 'stock', editable: false },
+			{ label: 'Estado', key: 'estado', editable: false }
+		]);
+		(function ($) {
+
+			var table = $('#tableInventory').DataTable({
+				searching: true,
+				paging: true,
+				select: true,
+				info: false,
+				lengthChange: false
+
+			});
+			$('#example tbody').on('click', 'tr', function () {
+				var data = table.row(this).data();
+
+			});
+
+		})(jQuery);
+	</script>
+
+
+</body>
+
+</html>

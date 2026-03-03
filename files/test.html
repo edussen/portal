@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Demo Login Worker</title>
+<style>
+  body { font-family: sans-serif; padding: 20px; }
+  input { margin: 5px 0; padding: 5px; width: 200px; }
+  button { padding: 5px 10px; margin-top: 5px; }
+  .section { margin-bottom: 30px; border-bottom: 1px solid #ccc; padding-bottom: 15px; }
+</style>
+</head>
+<body>
+
+<div class="section">
+  <h2>Registro</h2>
+  <input id="regUser" placeholder="Usuario"><br>
+  <input id="regPass" type="password" placeholder="Contraseña"><br>
+  <button onclick="register()">Registrar</button>
+</div>
+
+<div class="section">
+  <h2>Login</h2>
+  <input id="logUser" placeholder="Usuario"><br>
+  <input id="logPass" type="password" placeholder="Contraseña"><br>
+  <button onclick="login()">Iniciar sesión</button>
+</div>
+
+<script>
+const api = "https://demo-worker.mrluki4656.workers.dev";
+
+// Función para registrar usuario
+async function register() {
+  const user = document.getElementById("regUser").value;
+  const pass = document.getElementById("regPass").value;
+
+  try {
+    const res = await fetch(api + "/register", {
+      method: "POST",
+      body: JSON.stringify({ username: user, password: pass }),
+      headers: { "Content-Type": "application/json" }
+    });
+    const data = await res.json();
+    if (res.ok) {
+      alert(data.message);
+    } else {
+      alert(data.error);
+    }
+  } catch (err) {
+    alert("Error: " + err);
+  }
+}
+
+// Función para login
+async function login() {
+  const user = document.getElementById("logUser").value;
+  const pass = document.getElementById("logPass").value;
+
+  try {
+    const res = await fetch(api + "/login", {
+      method: "POST",
+      body: JSON.stringify({ username: user, password: pass }),
+      headers: { "Content-Type": "application/json" }
+    });
+    const data = await res.json();
+    if (res.ok) {
+      alert("Login exitoso!\nToken: " + data.token);
+    } else {
+      alert(data.error);
+    }
+  } catch (err) {
+    alert("Error: " + err);
+  }
+}
+</script>
+
+</body>
+</html>

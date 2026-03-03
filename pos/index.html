@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numart POS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="https://imagenes.numart.com.co/faviiconPOS.ico">
+    <link rel="stylesheet" href="/files/vendor/select2/css/select2.min.css">
+    <link href="/files/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link href="/files/css/style.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <span class="logo-text"><img style="width: 200px; padding: 10px 0 10px 0;"
+                    src="https://imagenes.numart.com.co/NUMART%20POS%20HORIZONTAL.png" alt=""></span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="" class="nav-item active" data-page="pos">
+                <i class="fa fa-home" style="height: auto;width: 20px;"></i>
+                <span>Facturar</span>
+            </a>
+            <a href="#overview" class="nav-item" data-page="overview">
+                <i class="fa fa-file-invoice" style="height: auto;width: 20px;"></i>
+                <span>Reportes</span>
+            </a>
+            <a href="#product" class="nav-item" data-page="product">
+                <i class="fa fa-user-clock" style="height: auto;width: 20px;"></i>
+                <span>Turnos</span>
+            </a>
+            <a href="#product" class="nav-item" data-page="product">
+                <i class="fa fa-random" style="height: auto;width: 20px;"></i>
+                <span>Devoluciones</span>
+            </a>
+            <a href="#product" class="nav-item" data-page="product">
+                <i class="fa fa-wallet" style="height: auto;width: 20px;"></i>
+                <span>Gestión de efectivo</span>
+            </a>
+            <a href="#settings" class="nav-item" data-page="settings">
+                <i class="fa fa-cogs" style="height: auto;width: 20px;"></i>
+                <span>Configuraciones</span>
+            </a>
+            <a href="https://ayuda.numart.com.co/" class="nav-item" data-page="help">
+                <span style="font-weight: 400;">Centro de ayuda<i class="fa fa-arrow-right"
+                        style="padding-left: 10px;"></i></span>
+            </a>
+            <a href="/" class="nav-item" data-page="help">
+                <span style="color: #197BC2;font-weight: 400;">Volver al Dashboard<i class="fa fa-arrow-left"
+                        style="padding-left: 10px;"></i></span>
+            </a>
+        </nav>
+
+        <div class="sidebar-user">
+            <div class="user-avatar">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            <div class="user-info">
+                <div class="user-name">Lendora</div>
+                <div class="user-role">Chef</div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- POS Page -->
+        <div id="pos-page" class="page active">
+            <!-- Header -->
+            <div class="pos-header">
+                <div class="header-content">
+                    <div class="header-title">
+                        <h1>Facturar</h1>
+                        <p class="header-date">Crear nueva factura de venta</p>
+                    </div>
+                    <div class="search-box">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="text" id="search-input" placeholder="Search...">
+                    </div>
+                </div>
+
+                <!-- Category Tabs -->
+                <div class="category-tabs">
+                    <button class="category-tab active" data-category="Main Course">
+                        <span class="category-icon"><i class="fa fa-box"></i></span>
+                        <div class="category-info">
+                            <div class="category-name">Todos los productos</div>
+                        </div>
+                    </button>
+                    <button class="category-tab" data-category="Favoritos">
+                        <span class="category-icon"><i class="fa fa-star"></i></span>
+                        <div class="category-info">
+                            <div class="category-name">Tus favoritos</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Items will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Other Pages -->
+        <div id="overview-page" class="page">
+            <div class="page-content">
+                <h1>Overview</h1>
+                <p>Overview page coming soon...</p>
+            </div>
+        </div>
+        <div id="product-page" class="page">
+            <div class="page-content">
+                <h1>Product</h1>
+                <p>Product management page coming soon...</p>
+            </div>
+        </div>
+        <div id="settings-page" class="page">
+            <div class="page-content">
+                <h1>Settings</h1>
+                <p>Settings page coming soon...</p>
+            </div>
+        </div>
+        <div id="help-page" class="page">
+            <div class="page-content">
+                <h1>Help Center</h1>
+                <p>Help center page coming soon...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Order Sidebar -->
+    <aside class="order-sidebar">
+        <div class="order-header">
+            <div class="col-xl-12 mb-2">
+                <label for="rol_nombre" class="form-label" style="font-size: 12px;">
+                    Tipo de comprobante
+                </label>
+                <select id="unidad_de_medida" class="default-select form-control wide" required>
+
+                    <option selected value="Empleados">Factura electrónica de venta</option>
+                    <option value="Empleados">Factura de ingreso</option>
+                </select>
+            </div>
+            <div class="col-xl-12 mb-2">
+                <label for="rol_nombre" class="form-label" style="font-size: 12px;">
+                    Vendedor
+                </label>
+                <div class="customer-info">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>Yilber Mateus Florez</span>
+                </div>
+            </div>
+
+            <div class="col-xl-12 mb-2">
+                <label for="rol_nombre2" class="form-label">
+                    Cliente
+                </label>
+                <select id="single-select">
+                    <option value="AL">Consumidor Final</option>
+                    <option value="AL2">Yilber Mateus Florez</option>
+                    <option value="WY">Yilber2 CEO Prueba</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="order-items">
+            <div class="order-items-label">Your order</div>
+            <div id="order-items-list">
+                <!-- Order items will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="order-footer">
+            <div class="order-pricing">
+                <div class="price-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Descuentos</span>
+                    <span id="discount" style="color: #e11d48;">$0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>IVA</span>
+                    <span id="iva">$0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Redondeo</span>
+                    <span id="redondeo" style="color: #e11d48;">$0.00</span>
+                </div>
+                <div class="price-row total">
+                    <span>Total a pagar</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+
+
+            <button data-bs-toggle="modal" data-bs-target="#anuncioModal" class="make-order-btn"
+                id="make-order-btn">Vender</button>
+        </div>
+    </aside>
+    <div class="modal fade" id="anuncioModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pagar factura</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="main_payment_container" class="payment-1" style="display: block;">
+                        <p
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 600;margin-bottom: 0rem">
+                            TOTAL</p>
+                        <p
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 600;margin-bottom: 0rem; color: #334155;font-size: 25px;">
+                            $1.785</p>
+                        <p
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 500;margin-bottom: 0rem; color: #334155">
+                            Cambio: <span id="cambio_pantalla_1" style="color: #e11d48;padding-left: 5px;"> $0</span>
+                        </p>
+
+                        <div class="payment-methods" id="metodos_lista">
+                            <div class="payment-label">Metodos de pago</div>
+                            <div class="payment-buttons">
+                                <button class="payment-btn" data-method="cash">
+                                    <i class="fa fa-money-bill"></i>
+                                    <span>Efectivo</span>
+                                </button>
+                                <button class="payment-btn" data-method="credit">
+                                    <i class="fa fa-credit-card"></i>
+                                    <span>Tarjeta de crédito</span>
+                                </button>
+                                <button class="payment-btn" data-method="ewallet">
+                                    <i class="fa fa-university"></i>
+                                    <span>Transferencia</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div style="display: none;" class="payment-methodsPart2" id="panel_efectivo">
+                            <div class="col-xl-12 mb-3">
+                                <div class="example">
+                                    <div class="payment-label">Valor en efectivo<i style="color: #197BC2;">*</i></div>
+                                    <input id="primer_nombre" type="number" class="form-control" required="">
+                                </div>
+                            </div>
+                            <div style="align-items: center;display: flex; justify-content: center; align-items: center"
+                                class="payment-label">Opciones rápidas</div>
+                            <div class="payment-buttons">
+                                <button class="payment-btn btn-quick" data-value="1785"><span>$1.785</span></button>
+                                <button class="payment-btn btn-quick" data-value="2000"><span>$2.000</span></button>
+                                <button class="payment-btn btn-quick" data-value="3000"><span>$3.000</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="success_container" class="success-payment" style="display: none;">
+                        <i style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 600;margin-bottom: 0rem; color: #334155;font-size: 70px;padding-bottom: 15px;"
+                            class="fa fa-smile-wink"></i>
+                        <p
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 600;margin-bottom: 0rem; color: #334155;padding-bottom: 5px;">
+                            ¡Muy bien!</p>
+                        <p
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 400;margin-bottom: 0rem; color: #878e97;padding-bottom: 35px;">
+                            Tu venta ha sido guardada con éxito</p>
+                        <p
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 600;margin-bottom: 0rem; color: #334155">
+                            TOTAL</p>
+                        <p id="total_pantalla_2"
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 600;margin-bottom: 0rem; color: #334155;font-size: 25px;">
+                            $1.785</p>
+                        <p
+                            style="align-items: center;display: flex; justify-content: center; align-items: center;font-weight: 500;margin-bottom: 0rem; color: #334155;padding-bottom: 35px;">
+                            Cambio: <span id="cambio_pantalla_2" style="color: #e11d48;padding-left: 5px;"> $0</span>
+                        </p>
+
+                        <div
+                            style="background-color: #f0f1f1; padding: 20px; display: flex; justify-content: center; font-family: Arial, sans-serif;">
+
+                            <div id="ticket"
+                                style="background-color: #f0f0f0; font-family: 'Courier New', Courier, monospace; display: flex; justify-content: center; padding: 20px; margin: 0; color: #000;">
+
+                                <div class="ticket"
+                                    style="background-color: #fff; width: 350px; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-radius: 2px;">
+
+                                    <div style="text-align: center;">
+                                        <img src="https://imagenes.numart.com.co/NUMART%20TEXT%20BLACK%20v3.png"
+                                            alt="Logo" style="height: auto; width: 160px;">
+                                        <h1 style="margin: 5px 0; font-size: 24px; font-weight: bold;">NUMART</h1>
+
+                                        <div style="font-size: 14px; margin-bottom: 15px; line-height: 1.4;">
+                                            grupo NUMART S.A
+                                            <br>NIT 222222222222-1<br>
+                                            <br>Tienda No. 0001<br>
+                                            REGIMEN COMÚN
+                                        </div>
+
+                                        <div style="font-weight: bold;">Factura electronica de venta</div>
+                                        <div style="font-weight: bold;">#1</div>
+                                        <div style="font-size: 14px; margin-bottom: 15px; line-height: 1.4;">
+                                            <b id="ticket_fecha">Fecha de emisión: 09/02/2026 12:00 am</b>
+                                            <br>Forma de pago: Contado
+                                            <br id="ticket_metodo">Método de pago: Efectivo<br>
+                                        </div>
+
+                                        <div style="font-weight: bold; font-size: 20px;">Consumidor Final</div>
+                                        <div>CC 222222222222</div>
+                                    </div>
+
+                                    <div style="border-top: 1px solid #000; margin: 10px 0;"></div>
+
+                                    <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                                        <thead>
+                                            <tr>
+                                                <th
+                                                    style="border-bottom: 1px solid #000; padding-bottom: 5px; text-align: left;">
+                                                    Cant.</th>
+                                                <th
+                                                    style="border-bottom: 1px solid #000; padding-bottom: 5px; text-align: left;">
+                                                    Descripción</th>
+                                                <th
+                                                    style="border-bottom: 1px solid #000; padding-bottom: 5px; text-align: right;">
+                                                    Prec. Unit</th>
+                                                <th
+                                                    style="border-bottom: 1px solid #000; padding-bottom: 5px; text-align: right;">
+                                                    Prec. Total </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="padding: 5px 0;">5</td>
+                                                <td style="padding: 5px 0;">CUADERNO PRIMAVERA C DOBLE LINEA</td>
+                                                <td style="padding: 5px 0; text-align: right;">10.000</td>
+                                                <td style="padding: 5px 0; text-align: right;">50.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 5px 0;">5</td>
+                                                <td style="padding: 5px 0;">TIJERA ETERNA 8.5</td>
+                                                <td style="padding: 5px 0; text-align: right;">7.000</td>
+                                                <td style="padding: 5px 0; text-align: right;">35.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 5px 0;">16</td>
+                                                <td style="padding: 5px 0;">PISTOLA SILICONA JOLLY</td>
+                                                <td style="padding: 5px 0; text-align: right;">12.000</td>
+                                                <td style="padding: 5px 0; text-align: right;">192.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 5px 0;">14</td>
+                                                <td style="padding: 5px 0;">CUADERNO NORMA FERROCARRIL D</td>
+                                                <td style="padding: 5px 0; text-align: right;">15.000</td>
+                                                <td style="padding: 5px 0; text-align: right;">210.000</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 5px 0;">5</td>
+                                                <td style="padding: 5px 0;">PELUCHE HELLO KITTY</td>
+                                                <td style="padding: 5px 0; text-align: right;">55.000</td>
+                                                <td style="padding: 5px 0; text-align: right;">275.000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div style="border-top: 1px solid #000; margin: 10px 0;"></div>
+
+                                    <div style="margin-top: 10px; text-align: right;">
+                                        <div style="display: flex; justify-content: flex-end; margin-bottom: 5px;">
+                                            <div
+                                                style="width: 150px; text-align: right; padding-right: 10px; font-weight: bold;">
+                                                Subtotal:</div>
+                                            <div id="subtotalTicket" style="font-weight: bold;">$0</div>
+                                        </div>
+                                        <div style="display: flex; justify-content: flex-end; margin-bottom: 5px;">
+                                            <div style="width: 150px; text-align: right; padding-right: 10px;">
+                                                Descuentos:</div>
+                                            <div id="descuentosTicket">-$0</div>
+                                        </div>
+                                        <div id="ivaTicket"
+                                            style="display: flex; justify-content: flex-end; margin-bottom: 5px;">
+                                            <div style="width: 150px; text-align: right; padding-right: 10px;">IVA
+                                                (19%):</div>
+                                            <div id="ivaTicket">$0</div>
+                                        </div>
+                                        <div id="redondeoTicket"
+                                            style="display: flex; justify-content: flex-end; margin-bottom: 5px;">
+                                            <div style="width: 150px; text-align: right; padding-right: 10px;">Redondeo
+                                            </div>
+                                            <div id="redondeoTicket">-$0</div>
+                                        </div>
+                                        <div
+                                            style="display: flex; justify-content: flex-end; margin-bottom: 5px; font-size: 20px;">
+                                            <div
+                                                style="width: 150px; text-align: right; padding-right: 10px; font-weight: bold;">
+                                                Total:</div>
+                                            <div id="TotalTicket" style="font-weight: bold;">$0</div>
+                                        </div>
+                                    </div>
+
+                                    <div style="font-size: 13px; margin-top: 20px;">
+                                        <div style="text-align: center; font-weight: bold;">Resumen de impuestos</div>
+                                        <div style="display: flex; justify-content: space-between; margin-top: 5px;">
+                                            <span>Tarifa</span>
+                                            <span>Base</span>
+                                            <span>Impuesto</span>
+                                        </div>
+                                        <div style="border-top: 1px dashed #000; margin: 10px 0;"></div>
+                                        <div style="display: flex; justify-content: space-between;">
+                                            <span>D = IVA 19%</span>
+                                            <span id="ivaBaseTicket">$0</span>
+                                            <span id="ivaImpuestoTicket">$0</span>
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 15px; font-size: 14px;">
+                                        <div id="dineroRecibidoTicket">Total recibido: $0</div>
+                                        <div id="cambioTicket">Cambio: $0</div>
+                                        <div>Total de líneas: 1</div>
+                                        <div id="totalProductosTicket">Total de productos: 0</div>
+                                    </div>
+
+                                    <div style="border-top: 1px solid #000; margin: 10px 0;"></div>
+
+                                    <div style="text-align: center;">
+                                        <div style="font-weight: bold; font-size: 20px;">CUFE</div>
+                                        <img src="https://imagenes.numart.com.co/qrCUFETest.png" alt="QR CUFE"
+                                            style="height: auto; width: 300px;">
+                                    </div>
+
+                                    <div style="margin-top: 20px; font-size: 12px; text-align: center;">
+                                        GRACIAS POR TU COMPRA
+                                    </div>
+                                    <div style="margin-top: 5px; font-size: 12px; text-align: center;">
+                                        www.numart.com.co
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">CANCELAR</button>
+                    <button type="button" class="btn btn-primary" id="btn_continuar">CONTINUAR</button>
+                    <button type="button" class="btn btn-success" id="btn_imprimir" style="display: none;"
+                        onclick="imprimirDiv('ticket')">IMPRIMIR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+    <script src="/files/vendor/global/global.min.js"></script>
+    <script src="/files/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+    <script src="/files/vendor/chart-js/chart.bundle.min.js"></script>
+    <script src="/files/js/custom.min.js"></script>
+
+
+
+    <script src="/files/vendor/select2/js/select2.full.min.js"></script>
+    <script src="/files/js/plugins-init/select2-init.js"></script>
+
+
+
+    <script src="/files/js/deznav-init.js"></script>
+
+
+
+
+    <!-- Apex Chart -->
+    <script src="/files/vendor/apexchart/apexchart.js"></script>
+
+
+
+    <!-- Daterangepicker -->
+    <!-- momment js is must -->
+    <script src="/files/vendor/moment/moment.min.js"></script>
+    <script src="/files/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- clockpicker -->
+    <script src="/files/vendor/clockpicker/js/bootstrap-clockpicker.min.js"></script>
+    <!-- asColorPicker -->
+    <script src="/files/vendor/jquery-asColor/jquery-asColor.min.js"></script>
+    <script src="/files/vendor/jquery-asGradient/jquery-asGradient.min.js"></script>
+    <script src="/files/vendor/jquery-asColorPicker/js/jquery-asColorPicker.min.js"></script>
+    <!-- Material color picker -->
+    <script src="/files/vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+    <!-- pickdate -->
+    <script src="/files/vendor/pickadate/picker.js"></script>
+    <script src="/files/vendor/pickadate/picker.time.js"></script>
+    <script src="/files/vendor/pickadate/picker.date.js"></script>
+
+
+
+    <!-- Daterangepicker -->
+    <script src="/files/js/plugins-init/bs-daterange-picker-init.js"></script>
+    <!-- Clockpicker init -->
+    <script src="/files/js/plugins-init/clock-picker-init.js"></script>
+    <!-- asColorPicker init -->
+    <script src="/files/js/plugins-init/jquery-asColorPicker.init.js"></script>
+    <!-- Material color picker init -->
+    <script src="/files/js/plugins-init/material-date-picker-init.js"></script>
+    <!-- Pickdate -->
+    <script src="/files/js/plugins-init/pickadate-init.js"></script>
+
+    <script src="/files/js/numart/main.js"></script>
+
+    <script src="/files/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="/files/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="/files/js/plugins-init/sweetalert.init.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

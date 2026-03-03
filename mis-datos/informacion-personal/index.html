@@ -1,0 +1,2707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Title -->
+	<title>Información personal - Numart</title>
+
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" href="https://imagenes.numart.com.co/favicon.ico">
+	<!-- Daterange picker -->
+	<link href="/files/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+	<!-- Clockpicker -->
+	<link href="/files/vendor/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
+	<!-- asColorpicker -->
+	<link href="/files/vendor/jquery-asColorPicker/css/asColorPicker.min.css" rel="stylesheet">
+	<!-- Material color picker -->
+	<link href="/files/vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css"
+		rel="stylesheet">
+	<!-- Pick date -->
+	<link rel="stylesheet" href="/files/vendor/pickadate/themes/default.css">
+	<link rel="stylesheet" href="/files/vendor/pickadate/themes/default.date.css">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Custom Stylesheet -->
+	<link href="/files/vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link href="/files/css/style.css" rel="stylesheet">
+	<link href="/files/css/numart.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!--*******************
+        Preloader start
+    ********************-->
+	<div id="preloader">
+		<div class="sk-three-bounce">
+			<div class="sk-child sk-bounce1"></div>
+			<div class="sk-child sk-bounce2"></div>
+			<div class="sk-child sk-bounce3"></div>
+		</div>
+	</div>
+	<!--*******************
+        Preloader end
+    ********************-->
+
+
+	<!--**********************************
+        Main wrapper start
+    ***********************************-->
+	<div id="main-wrapper">
+
+
+
+		<!--**********************************
+            Chat box start
+        ***********************************-->
+		<div class="chatbox">
+			<div class="chatbox-close"></div>
+			<div class="custom-tab-1">
+				<ul class="nav nav-tabs">
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#notes">Notes</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-bs-toggle="tab" href="#alerts">Alerts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" data-bs-toggle="tab" href="#chat">Chat</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane fade active show" id="chat" role="tabpanel">
+						<div class="card mb-sm-3 mb-md-0 contacts_card dz-chat-user-box">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" />
+											<rect fill="#000000" opacity="0.3"
+												transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
+												x="4" y="11" width="16" height="2" rx="1" />
+										</g>
+									</svg></a>
+								<div>
+									<h6 class="mb-1">Chat List</h6>
+									<p class="mb-0">Show All</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<circle fill="#000000" cx="5" cy="12" r="2" />
+											<circle fill="#000000" cx="12" cy="12" r="2" />
+											<circle fill="#000000" cx="19" cy="12" r="2" />
+										</g>
+									</svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll  " id="DZ_W_Contacts_Body">
+								<ul class="contacts">
+									<li class="name-first-letter">A</li>
+									<li class="active dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Archie Parker</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Alfie Mason</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/3.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>AharlieKane</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/4.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">B</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/5.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Bashid Samim</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Breddie Ronan</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Ceorge Carson</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">D</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/3.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Darry Parker</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/4.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Denry Hunter</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">J</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/5.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Jack Ronan</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Jacob Tucker</span>
+												<p>Kalid is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>James Logan</span>
+												<p>Taherah left 7 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/3.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon"></span>
+											</div>
+											<div class="user_info">
+												<span>Joshua Weston</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">O</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/4.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Oliver Acker</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+									<li class="dz-chat-user">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont">
+												<img src="/files/images/avatar/5.jpg" class="rounded-circle user_img"
+													alt="">
+												<span class="online_icon offline"></span>
+											</div>
+											<div class="user_info">
+												<span>Oscar Weston</span>
+												<p>Rashid left 50 mins ago</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="card chat dz-chat-history-box d-none">
+							<div class="card-header chat-list-header text-center">
+								<a href="#" class="dz-chat-history-back">
+									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+										width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<polygon points="0 0 24 0 24 24 0 24" />
+											<rect fill="#000000" opacity="0.3"
+												transform="translate(15.000000, 12.000000) scale(-1, 1) rotate(-90.000000) translate(-15.000000, -12.000000) "
+												x="14" y="7" width="2" height="10" rx="1" />
+											<path
+												d="M3.7071045,15.7071045 C3.3165802,16.0976288 2.68341522,16.0976288 2.29289093,15.7071045 C1.90236664,15.3165802 1.90236664,14.6834152 2.29289093,14.2928909 L8.29289093,8.29289093 C8.67146987,7.914312 9.28105631,7.90106637 9.67572234,8.26284357 L15.6757223,13.7628436 C16.0828413,14.136036 16.1103443,14.7686034 15.7371519,15.1757223 C15.3639594,15.5828413 14.7313921,15.6103443 14.3242731,15.2371519 L9.03007346,10.3841355 L3.7071045,15.7071045 Z"
+												fill="#000000" fill-rule="nonzero"
+												transform="translate(9.000001, 11.999997) scale(-1, -1) rotate(90.000000) translate(-9.000001, -11.999997) " />
+										</g>
+									</svg>
+								</a>
+								<div>
+									<h6 class="mb-1">Chat with Khelesh</h6>
+									<p class="mb-0 text-success">Online</p>
+								</div>
+								<div class="dropdown">
+									<a href="#" data-bs-toggle="dropdown" aria-expanded="false"><svg
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+											viewBox="0 0 24 24" version="1.1">
+											<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+												<rect x="0" y="0" width="24" height="24" />
+												<circle fill="#000000" cx="5" cy="12" r="2" />
+												<circle fill="#000000" cx="12" cy="12" r="2" />
+												<circle fill="#000000" cx="19" cy="12" r="2" />
+											</g>
+										</svg></a>
+									<ul class="dropdown-menu dropdown-menu-end">
+										<li class="dropdown-item"><i class="fas fa-user-circle text-primary me-2"></i>
+											View profile</li>
+										<li class="dropdown-item"><i class="fas fa-users text-primary me-2"></i> Add to
+											close friends</li>
+										<li class="dropdown-item"><i class="fas fa-plus text-primary me-2"></i> Add to
+											group</li>
+										<li class="dropdown-item"><i class="fas fa-ban text-primary me-2"></i> Block
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="card-body msg_card_body dz-scroll" id="DZ_W_Contacts_Body3">
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Hi, how are you samim?
+										<span class="msg_time">8:40 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Hi Khalid i am good tnx how about you?
+										<span class="msg_time_send">8:55 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am good too, thank you for your chat template
+										<span class="msg_time">9:00 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										You are welcome
+										<span class="msg_time_send">9:05 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am looking for your next templates
+										<span class="msg_time">9:07 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Ok, thank you have a good day
+										<span class="msg_time_send">9:10 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Bye, see you
+										<span class="msg_time">9:12 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Hi, how are you samim?
+										<span class="msg_time">8:40 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Hi Khalid i am good tnx how about you?
+										<span class="msg_time_send">8:55 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am good too, thank you for your chat template
+										<span class="msg_time">9:00 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										You are welcome
+										<span class="msg_time_send">9:05 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										I am looking for your next templates
+										<span class="msg_time">9:07 AM, Today</span>
+									</div>
+								</div>
+								<div class="d-flex justify-content-end mb-4">
+									<div class="msg_cotainer_send">
+										Ok, thank you have a good day
+										<span class="msg_time_send">9:10 AM, Today</span>
+									</div>
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/2.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+								</div>
+								<div class="d-flex justify-content-start mb-4">
+									<div class="img_cont_msg">
+										<img src="/files/images/avatar/1.jpg" class="rounded-circle user_img_msg"
+											alt="">
+									</div>
+									<div class="msg_cotainer">
+										Bye, see you
+										<span class="msg_time">9:12 AM, Today</span>
+									</div>
+								</div>
+							</div>
+							<div class="card-footer type_msg">
+								<div class="input-group">
+									<textarea class="form-control" placeholder="Type your message..."></textarea>
+									<div class="input-group-append">
+										<button type="button" class="btn btn-primary"><i
+												class="fas fa-location-arrow"></i></button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="alerts" role="tabpanel">
+						<div class="card mb-sm-3 mb-md-0 contacts_card">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<circle fill="#000000" cx="5" cy="12" r="2" />
+											<circle fill="#000000" cx="12" cy="12" r="2" />
+											<circle fill="#000000" cx="19" cy="12" r="2" />
+										</g>
+									</svg></a>
+								<div>
+									<h6 class="mb-1">Notications</h6>
+									<p class="mb-0">Show All</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<path
+												d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+												fill="#000000" fill-rule="nonzero" opacity="0.3" />
+											<path
+												d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+												fill="#000000" fill-rule="nonzero" />
+										</g>
+									</svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body1">
+								<ul class="contacts">
+									<li class="name-first-letter">SEVER STATUS</li>
+									<li class="active">
+										<div class="d-flex bd-highlight">
+											<div class="img_cont primary">KK</div>
+											<div class="user_info">
+												<span>David Nester Birthday</span>
+												<p class="text-primary">Today</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">SOCIAL</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont success">RU<i class="icon fa-birthday-cake"></i></div>
+											<div class="user_info">
+												<span>Perfection Simplified</span>
+												<p>Jame Smith commented on your status</p>
+											</div>
+										</div>
+									</li>
+									<li class="name-first-letter">SEVER STATUS</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont primary">AU<i class="icon fas fa-user-plus"></i></div>
+											<div class="user_info">
+												<span>AharlieKane</span>
+												<p>Sami is online</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="img_cont info">MO<i class="icon fas fa-user-plus"></i></div>
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>Nargis left 30 mins ago</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer"></div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="notes">
+						<div class="card mb-sm-3 mb-md-0 note_card">
+							<div class="card-header chat-list-header text-center">
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect fill="#000000" x="4" y="11" width="16" height="2" rx="1" />
+											<rect fill="#000000" opacity="0.3"
+												transform="translate(12.000000, 12.000000) rotate(-270.000000) translate(-12.000000, -12.000000) "
+												x="4" y="11" width="16" height="2" rx="1" />
+										</g>
+									</svg></a>
+								<div>
+									<h6 class="mb-1">Notes</h6>
+									<p class="mb-0">Add New Nots</p>
+								</div>
+								<a href="#"><svg xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink" width="18px" height="18px"
+										viewBox="0 0 24 24" version="1.1">
+										<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+											<rect x="0" y="0" width="24" height="24" />
+											<path
+												d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
+												fill="#000000" fill-rule="nonzero" opacity="0.3" />
+											<path
+												d="M11,16 C13.7614237,16 16,13.7614237 16,11 C16,8.23857625 13.7614237,6 11,6 C8.23857625,6 6,8.23857625 6,11 C6,13.7614237 8.23857625,16 11,16 Z M11,18 C7.13400675,18 4,14.8659932 4,11 C4,7.13400675 7.13400675,4 11,4 C14.8659932,4 18,7.13400675 18,11 C18,14.8659932 14.8659932,18 11,18 Z"
+												fill="#000000" fill-rule="nonzero" />
+										</g>
+									</svg></a>
+							</div>
+							<div class="card-body contacts_body p-0 dz-scroll" id="DZ_W_Contacts_Body2">
+								<ul class="contacts">
+									<li class="active">
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>New order placed..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>Youtube, a video-sharing website..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>john just buy your product..</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="d-flex bd-highlight">
+											<div class="user_info">
+												<span>Athan Jacoby</span>
+												<p>10 Aug 2020</p>
+											</div>
+											<div class="ms-auto">
+												<a href="#" class="btn btn-primary btn-xs sharp me-1"><i
+														class="fas fa-pencil-alt"></i></a>
+												<a href="#" class="btn btn-danger btn-xs sharp"><i
+														class="fas fa-trash"></i></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+            Chat box End
+        ***********************************-->
+
+
+
+
+		<!--**********************************
+            Header start
+        ***********************************-->
+		<div class="numart-header"></div>
+		<!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+		<!--**********************************
+            Sidebar start
+        ***********************************-->
+		<div class="deznav">
+			<div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+
+					<li>
+						<a href="/" class="ai-icon" aria-expanded="false">
+							<i class="flaticon-dashboard"></i>
+							<span class="nav-text">Principal</span>
+						</a>
+					</li>
+
+					<li id="misDatos_menu" class="mm-activeOpen" style="pointer-events:none;">
+						<a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+							<i class="fa fa-chart-line"></i>
+							<span class="nav-text">Mis datos</span>
+						</a>
+						<div class="menu-item-container">
+							<div class="linea-inferior"></div>
+						</div>
+						<ul class="mm-collapse mm-show" aria-expanded="false">
+							<li class="mm-active2">
+								<a href="/mis-datos/informacion-personal">
+									<i class="minus fa fa-minus" style="font-size: 10px;"></i> Información personal
+								</a>
+							</li>
+							<li id="mis-claves">
+								<a href="/mis-datos/mis-claves">
+									<i class="minus fa fa-minus" style="font-size: 10px;"></i> Mis claves
+								</a>
+							</li>
+						</ul>
+					</li>
+
+					<li id="misMensajes_menu">
+						<a class="has-arrow ai-icon" href="javascript:void(0)" aria-expanded="false">
+							<i class="fa fa-comment"></i>
+							<span class="nav-text">Mis mensajes</span>
+						</a>
+						<div class="menu-item-container">
+							<div class="linea-inferior"></div>
+						</div>
+						<ul aria-expanded="false">
+							<li><a href="/mis-mensajes/redactar-mensaje"><i class="minus fa fa-minus"
+										style="font-size: 10px;"></i> Redactar mensaje</a></li>
+							<li><a href="/mis-mensajes/"><i class="minus fa fa-minus" style="font-size: 10px;"></i>
+									Bandeja de entrada</a></li>
+							<li><a href="/mis-mensajes/mis-listas-de-distribucion"><i class="minus fa fa-minus"
+										style="font-size: 10px;"></i> Listas de distribución</a></li>
+						</ul>
+					</li>
+
+					<li id="misReuniones_menu">
+						<a href="/mis-reuniones/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-user-tie"></i>
+							<span class="nav-text">Mis reuniones</span>
+						</a>
+					</li>
+
+					<li id="misAutorizaciones_menu">
+						<a href="/mis-autorizaciones/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-volleyball-ball"></i>
+							<span class="nav-text">Mis autorizaciones</span>
+						</a>
+					</li>
+
+					<li id="misTareas_menu">
+						<a href="/mis-tareas/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-book"></i>
+							<span class="nav-text">Mis tareas</span>
+							<span class="badge badge-sm badge-danger ms-3">New</span>
+						</a>
+					</li>
+
+					<li id="miAgenda_menu">
+						<a href="/mi-agenda/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-calendar"></i>
+							<span class="nav-text">Mi agenda</span>
+						</a>
+					</li>
+
+					<li id="miNomina_menu">
+						<a href="/mi-nomina/" class="ai-icon" aria-expanded="false">
+							<i class="fa fa-dollar-sign"></i>
+							<span class="nav-text">Mi nomina</span>
+						</a>
+					</li>
+
+					<li class="laboralYear"
+						style="background-color: #197BC2; color: #fff; height: 45px; font-size: 15px; display: flex; justify-content: center; align-items: center;">
+						Año laboral 2026
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<!--**********************************
+            Sidebar end
+        ***********************************-->
+
+		<!--**********************************
+            Content body start
+        ***********************************-->
+		<div class="content-body">
+			<div class="container-fluid">
+				<div class="row page-titles mx-0">
+					<div class="col-sm-6 p-md-0" style="display: flex; flex-direction: row;align-items: center;">
+						<i class="fa fa-users" style="font-size: 55px;margin-right: 15px;color: #197BC2;"
+							aria-hidden="true"></i>
+						<div class="welcome-text">
+							<p style="font-weight: bolder;font-size: 30px;color: #5c5c5c;margin-bottom: 0rem">
+								Información personal
+							</p>
+							<h4 style="color: #5c5c5c;font-size: 20px;">Información del usuario
+							</h4>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- row -->
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Datos Personales</h4>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Primer nombre<i style="color: #197BC2;">*</i></p>
+											<input id="primer_nombre" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Segundo nombre</p>
+											<input id="segundo_nombre" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Primer apellido<i style="color: #197BC2;">*</i></p>
+											<input id="primer_apellido" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Segundo apellido<i style="color: #197BC2;">*</i></p>
+											<input id="segundo_apellido" type="text" class="form-control">
+
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Sexo<i style="color: #197BC2;">*</i></p>
+											<select id="sexo" class="default-select  form-control wide">
+												<option value="" disabled="" selected="">Seleccione sexo</option>
+												<option value="Hombre">Hombre</option>
+												<option value="Mujer">Mujer</option>
+												<option value="Mixto">Mixto</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Tipo de documento<i style="color: #197BC2;">*</i></p>
+											<select id="documento" class="default-select  form-control wide">
+												<option value="" disabled selected>Seleccione documento</option>
+												<option value="TI">Tarjeta de identidad</option>
+												<option value="CC">Cédula de ciudadanía</option>
+												<option value="CE">Cédula extranjería</option>
+												<option value="C">Certificado cabildo</option>
+												<option value="NIT">NIT (NIT)</option>
+												<option value="ISE">N° Identificación Secretaria de Educación</option>
+												<option value="NUIP">NUIP</option>
+												<option value="NIP">Número de Identificación Personal</option>
+												<option value="PAS">Pasaporte</option>
+												<option value="RC">Registro civil</option>
+												<option value="RUT">RUT</option>
+												<option value="O">Otro</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Numero de documento<i style="color: #197BC2;">*</i></p>
+											<input id="numero_documento" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Fecha de nacimiento<i style="color: #197BC2;">*</i></p>
+											<input id="fecha_de_nacimiento" class="form-control" type="date"
+												name="daterange" value="06/01/2015 - 06/07/2015">
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Tel. Emergencia<i style="color: #197BC2;">*</i></p>
+											<input id="telefono_emergencia" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Movil 1<i style="color: #197BC2;">*</i></p>
+											<input id="movil1" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Movil 2</p>
+											<input id="movil2" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Estado civil<i style="color: #197BC2;">*</i></p>
+											<input id="estado_civil" type="text" class="form-control">
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Dirección</h4>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-xl-6 mb-3">
+										<div class="example">
+											<p class="mb-1">Dirección<i style="color: #197BC2;">*</i></p>
+											<input id="direccion" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Barrio<i style="color: #197BC2;">*</i></p>
+											<input id="barrio" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">ZIP<i style="color: #197BC2;">*</i></p>
+											<input id="codigo_postal" type="text" class="form-control">
+
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">País<i style="color: #197BC2;">*</i></p>
+											<select id="pais" class="default-select  form-control wide">
+												<option value="" disabled="" selected="">Seleccione país</option>
+												<option value="Colombia">Colombia</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+
+											<p class="mb-1">Estado/Región<i style="color: #197BC2;">*</i></p>
+											<select id="estado_residencia" class="default-select  form-control wide">
+												<option value="" disabled="" selected="">Seleccione estado</option>
+												<option value="Amazonas">Amazonas</option>
+												<option value="Antioquia">Antioquia</option>
+												<option value="Arauca">Arauca</option>
+												<option value="Atlántico">Atlántico</option>
+												<option value="Bogotá D.C.">Bogotá D.C.</option>
+												<option value="Bolívar">Bolívar</option>
+												<option value="Boyacá">Boyacá</option>
+												<option value="Caldas">Caldas</option>
+												<option value="Caquetá">Caquetá</option>
+												<option value="Casanare">Casanare</option>
+												<option value="Cauca">Cauca</option>
+												<option value="Cesar">Cesar</option>
+												<option value="Chocó">Chocó</option>
+												<option value="Córdoba">Córdoba</option>
+												<option value="Cundinamarca">Cundinamarca</option>
+												<option value="Guainía">Guainía</option>
+												<option value="Guaviare">Guaviare</option>
+												<option value="Huila">Huila</option>
+												<option value="La Guajira">La Guajira</option>
+												<option value="Magdalena">Magdalena</option>
+												<option value="Meta">Meta</option>
+												<option value="Nariño">Nariño</option>
+												<option value="Norte de Santander">Norte de Santander</option>
+												<option value="Putumayo">Putumayo</option>
+												<option value="Quindío">Quindío</option>
+												<option value="Risaralda">Risaralda</option>
+												<option value="San Andrés y Providencia">San Andrés y Providencia
+												</option>
+												<option value="Santander">Santander</option>
+												<option value="Sucre">Sucre</option>
+												<option value="Tolima">Tolima</option>
+												<option value="Valle del Cauca">Valle del Cauca</option>
+												<option value="Vaupés">Vaupés</option>
+												<option value="Vichada">Vichada</option>
+
+											</select>
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Municipio<i style="color: #197BC2;">*</i></p>
+											<select id="municipio" class="default-select  form-control wide">
+												<option value="" disabled="" selected="">Seleccione municipio</option>
+												<!-- Amazonas -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Amazonas</option>
+
+												<option value="Leticia">Leticia</option>
+												<option value="Puerto Nariño">Puerto Nariño</option>
+												<option value="Tarapacá">Tarapacá</option>
+												<option value="La Chorrera">La Chorrera</option>
+												<option value="El Encanto">El Encanto</option>
+												<option value="La Pedrera">La Pedrera</option>
+												<option value="La Victoria">La Victoria</option>
+												<option value="Mirití-Paraná">Mirití-Paraná</option>
+												<option value="Puerto Alegría">Puerto Alegría</option>
+												<option value="Puerto Arica">Puerto Arica</option>
+												<option value="Solano">Solano</option>
+												<option value="Carurú">Carurú</option>
+												<option value="Mitú">Mitú</option>
+												<option value="Taraira">Taraira</option>
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Antioquia</option>
+
+												<option value="Abejorral">Abejorral</option>
+												<option value="Abriaquí">Abriaquí</option>
+												<option value="Alejandría">Alejandría</option>
+												<option value="Amagá">Amagá</option>
+												<option value="Amalfi">Amalfi</option>
+												<option value="Andes">Andes</option>
+												<option value="Angelópolis">Angelópolis</option>
+												<option value="Angostura">Angostura</option>
+												<option value="Anorí">Anorí</option>
+												<option value="Santafé de Antioquia">Santafé de Antioquia</option>
+												<option value="Anzá">Anzá</option>
+												<option value="Apartadó">Apartadó</option>
+												<option value="Arboletes">Arboletes</option>
+												<option value="Argelia">Argelia</option>
+												<option value="Armenia">Armenia</option>
+												<option value="Barbosa">Barbosa</option>
+												<option value="Bello">Bello</option>
+												<option value="Belmira">Belmira</option>
+												<option value="Betania">Betania</option>
+												<option value="Betulia">Betulia</option>
+												<option value="Ciudad Bolívar">Ciudad Bolívar</option>
+												<option value="Briceño">Briceño</option>
+												<option value="Buriticá">Buriticá</option>
+												<option value="Cáceres">Cáceres</option>
+												<option value="Caicedo">Caicedo</option>
+												<option value="Caldas">Caldas</option>
+												<option value="Campamento">Campamento</option>
+												<option value="Cañasgordas">Cañasgordas</option>
+												<option value="Caracolí">Caracolí</option>
+												<option value="Caramanta">Caramanta</option>
+												<option value="Carepa">Carepa</option>
+												<option value="El Carmen de Viboral">El Carmen de Viboral</option>
+												<option value="Carmen de Atrato">Carmen de Atrato</option>
+												<option value="Carolina del Príncipe">Carolina del Príncipe</option>
+												<option value="Caucasia">Caucasia</option>
+												<option value="Chigorodó">Chigorodó</option>
+												<option value="Cisneros">Cisneros</option>
+												<option value="Cocorná">Cocorná</option>
+												<option value="Concepción">Concepción</option>
+												<option value="Concordia">Concordia</option>
+												<option value="Copacabana">Copacabana</option>
+												<option value="Dabeiba">Dabeiba</option>
+												<option value="Don Matías">Don Matías</option>
+												<option value="Ebéjico">Ebéjico</option>
+												<option value="El Bagre">El Bagre</option>
+												<option value="Entrerríos">Entrerríos</option>
+												<option value="Envigado">Envigado</option>
+												<option value="Fredonia">Fredonia</option>
+												<option value="Frontino">Frontino</option>
+												<option value="Giraldo">Giraldo</option>
+												<option value="Girardota">Girardota</option>
+												<option value="Gómez Plata">Gómez Plata</option>
+												<option value="Granada">Granada</option>
+												<option value="Guadalupe">Guadalupe</option>
+												<option value="Guarne">Guarne</option>
+												<option value="Guatapé">Guatapé</option>
+												<option value="Heliconia">Heliconia</option>
+												<option value="Hispania">Hispania</option>
+												<option value="Itagüí">Itagüí</option>
+												<option value="Ituango">Ituango</option>
+												<option value="Jardín">Jardín</option>
+												<option value="Jericó">Jericó</option>
+												<option value="La Ceja">La Ceja</option>
+												<option value="La Estrella">La Estrella</option>
+												<option value="La Pintada">La Pintada</option>
+												<option value="La Unión">La Unión</option>
+												<option value="Liborina">Liborina</option>
+												<option value="Maceo">Maceo</option>
+												<option value="Marinilla">Marinilla</option>
+												<option value="Medellín">Medellín</option>
+												<option value="Montebello">Montebello</option>
+												<option value="Murindó">Murindó</option>
+												<option value="Mutatá">Mutatá</option>
+												<option value="Nariño">Nariño</option>
+												<option value="Nechí">Nechí</option>
+												<option value="Necoclí">Necoclí</option>
+												<option value="Olaya">Olaya</option>
+												<option value="Peñol">Peñol</option>
+												<option value="Peque">Peque</option>
+												<option value="Pueblorrico">Pueblorrico</option>
+												<option value="Puerto Berrío">Puerto Berrío</option>
+												<option value="Puerto Nare">Puerto Nare</option>
+												<option value="Puerto Triunfo">Puerto Triunfo</option>
+												<option value="Remedios">Remedios</option>
+												<option value="Retiro">Retiro</option>
+												<option value="Rionegro">Rionegro</option>
+												<option value="Sabanalarga">Sabanalarga</option>
+												<option value="Sabaneta">Sabaneta</option>
+												<option value="Salgar">Salgar</option>
+												<option value="San Andrés de Cuerquía">San Andrés de Cuerquía</option>
+												<option value="San Carlos">San Carlos</option>
+												<option value="San Francisco">San Francisco</option>
+												<option value="San Jerónimo">San Jerónimo</option>
+												<option value="San José de la Montaña">San José de la Montaña</option>
+												<option value="San Juan de Urabá">San Juan de Urabá</option>
+												<option value="San Luis">San Luis</option>
+												<option value="San Pedro de Urabá">San Pedro de Urabá</option>
+												<option value="San Pedro de los Milagros">San Pedro de los Milagros
+												</option>
+												<option value="San Rafael">San Rafael</option>
+												<option value="San Roque">San Roque</option>
+												<option value="San Vicente">San Vicente</option>
+												<option value="Santa Bárbara">Santa Bárbara</option>
+												<option value="Santa Rosa de Osos">Santa Rosa de Osos</option>
+												<option value="Santo Domingo">Santo Domingo</option>
+												<option value="Santuario">Santuario</option>
+												<option value="Segovia">Segovia</option>
+												<option value="Sonsón">Sonsón</option>
+												<option value="Sopetrán">Sopetrán</option>
+												<option value="Támesis">Támesis</option>
+												<option value="Tarazá">Tarazá</option>
+												<option value="Titiribí">Titiribí</option>
+												<option value="Toledo">Toledo</option>
+												<option value="Turbo">Turbo</option>
+												<option value="Uramita">Uramita</option>
+												<option value="Urrao">Urrao</option>
+												<option value="Valdivia">Valdivia</option>
+												<option value="Valparaíso">Valparaíso</option>
+												<option value="Vegachí">Vegachí</option>
+												<option value="Venecia">Venecia</option>
+												<option value="Vigía del Fuerte">Vigía del Fuerte</option>
+												<option value="Yalí">Yalí</option>
+												<option value="Yarumal">Yarumal</option>
+												<option value="Yolombó">Yolombó</option>
+												<option value="Yondó">Yondó</option>
+												<option value="Zaragoza">Zaragoza</option>
+												<!-- Atlántico -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Atlántico</option>
+
+												<option value="Baranoa">Baranoa</option>
+												<option value="Barranquilla">Barranquilla</option>
+												<option value="Campo de la Cruz">Campo de la Cruz</option>
+												<option value="Candelaria">Candelaria</option>
+												<option value="Galapa">Galapa</option>
+												<option value="Juan de Acosta">Juan de Acosta</option>
+												<option value="Luruaco">Luruaco</option>
+												<option value="Malambo">Malambo</option>
+												<option value="Manatí">Manatí</option>
+												<option value="Palmar de Varela">Palmar de Varela</option>
+												<option value="Piojó">Piojó</option>
+												<option value="Polonuevo">Polonuevo</option>
+												<option value="Ponedera">Ponedera</option>
+												<option value="Puerto Colombia">Puerto Colombia</option>
+												<option value="Repelón">Repelón</option>
+												<option value="Sabanagrande">Sabanagrande</option>
+												<option value="Sabanalarga">Sabanalarga</option>
+												<option value="Santa Lucía">Santa Lucía</option>
+												<option value="Santo Tomás">Santo Tomás</option>
+												<option value="Soledad">Soledad</option>
+												<option value="Suán">Suán</option>
+												<option value="Tubará">Tubará</option>
+												<option value="Usiacurí">Usiacurí</option>
+												<!-- Bogotá D.C. -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Bogotá D.C.</option>
+
+												<option value="Bogotá">Bogotá</option>
+												<!-- Bolívar -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Bolívar</option>
+
+												<option value="Achí">Achí</option>
+												<option value="Altos del Rosario">Altos del Rosario</option>
+												<option value="Arenal">Arenal</option>
+												<option value="Arjona">Arjona</option>
+												<option value="Arroyohondo">Arroyohondo</option>
+												<option value="Barranco de Loba">Barranco de Loba</option>
+												<option value="Calamar">Calamar</option>
+												<option value="Cantagallo">Cantagallo</option>
+												<option value="Cartagena de Indias">Cartagena de Indias</option>
+												<option value="Cicuco">Cicuco</option>
+												<option value="Clemencia">Clemencia</option>
+												<option value="Cordoba">Cordoba</option>
+												<option value="El Carmen de Bolívar">El Carmen de Bolívar</option>
+												<option value="El Guamo">El Guamo</option>
+												<option value="El Peñón">El Peñón</option>
+												<option value="Hatillo de Loba">Hatillo de Loba</option>
+												<option value="Magangué">Magangué</option>
+												<option value="Mahates">Mahates</option>
+												<option value="Margarita">Margarita</option>
+												<option value="María la Baja">María la Baja</option>
+												<option value="Mompós">Mompós</option>
+												<option value="Morales">Morales</option>
+												<option value="Norosí">Norosí</option>
+												<option value="Pinillos">Pinillos</option>
+												<option value="Regidor">Regidor</option>
+												<option value="Río Viejo">Río Viejo</option>
+												<option value="San Cristóbal">San Cristóbal</option>
+												<option value="San Estanislao">San Estanislao</option>
+												<option value="San Fernando">San Fernando</option>
+												<option value="San Jacinto">San Jacinto</option>
+												<option value="San Jacinto del Cauca">San Jacinto del Cauca</option>
+												<option value="San Juan Nepomuceno">San Juan Nepomuceno</option>
+												<option value="San Martín de Loba">San Martín de Loba</option>
+												<option value="San Pablo">San Pablo</option>
+												<option value="Santa Catalina">Santa Catalina</option>
+												<option value="Santa Rosa">Santa Rosa</option>
+												<option value="Santa Rosa del Sur">Santa Rosa del Sur</option>
+												<option value="Simití">Simití</option>
+												<option value="Soplaviento">Soplaviento</option>
+												<option value="Talaigua Nuevo">Talaigua Nuevo</option>
+												<option value="Tiquisio">Tiquisio</option>
+												<option value="Turbaco">Turbaco</option>
+												<option value="Turbaná">Turbaná</option>
+												<option value="Villanueva">Villanueva</option>
+												<option value="Zambrano">Zambrano</option>
+												<!-- Boyacá -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Boyacá</option>
+
+												<option value="Almeida">Almeida</option>
+												<option value="Aquitania">Aquitania</option>
+												<option value="Arcabuco">Arcabuco</option>
+												<option value="Belén">Belén</option>
+												<option value="Berbeo">Berbeo</option>
+												<option value="Betéitiva">Betéitiva</option>
+												<option value="Boavita">Boavita</option>
+												<option value="Boyacá">Boyacá</option>
+												<option value="Briceño">Briceño</option>
+												<option value="Buenavista">Buenavista</option>
+												<option value="Busbanzá">Busbanzá</option>
+												<option value="Campohermoso">Campohermoso</option>
+												<option value="Cerinza">Cerinza</option>
+												<option value="Chinavita">Chinavita</option>
+												<option value="Chiquinquirá">Chiquinquirá</option>
+												<option value="Chíquiza">Chíquiza</option>
+												<option value="Chiscas">Chiscas</option>
+												<option value="Chita">Chita</option>
+												<option value="Chitaraque">Chitaraque</option>
+												<option value="Chivatá">Chivatá</option>
+												<option value="Chivor">Chivor</option>
+												<option value="Ciénega">Ciénega</option>
+												<option value="Cómbita">Cómbita</option>
+												<option value="Coper">Coper</option>
+												<option value="Corrales">Corrales</option>
+												<option value="Covarachía">Covarachía</option>
+												<option value="Cubará">Cubará</option>
+												<option value="Cucaita">Cucaita</option>
+												<option value="Cuítiva">Cuítiva</option>
+												<option value="Duitama">Duitama</option>
+												<option value="El Cocuy">El Cocuy</option>
+												<option value="El Espino">El Espino</option>
+												<option value="Firavitoba">Firavitoba</option>
+												<option value="Floresta">Floresta</option>
+												<option value="Gachantivá">Gachantivá</option>
+												<option value="Gámeza">Gámeza</option>
+												<option value="Garagoa">Garagoa</option>
+												<option value="Guacamayas">Guacamayas</option>
+												<option value="Guateque">Guateque</option>
+												<option value="Guayatá">Guayatá</option>
+												<option value="Güicán">Güicán</option>
+												<option value="Iza">Iza</option>
+												<option value="Jenesano">Jenesano</option>
+												<option value="Jericó">Jericó</option>
+												<option value="La Capilla">La Capilla</option>
+												<option value="La Uvita">La Uvita</option>
+												<option value="La Victoria">La Victoria</option>
+												<option value="Labateca">Labateca</option>
+												<option value="Macanal">Macanal</option>
+												<option value="Maripí">Maripí</option>
+												<option value="Miraflores">Miraflores</option>
+												<option value="Mongua">Mongua</option>
+												<option value="Monguí">Monguí</option>
+												<option value="Moniquirá">Moniquirá</option>
+												<option value="Motavita">Motavita</option>
+												<option value="Muzo">Muzo</option>
+												<option value="Nobsa">Nobsa</option>
+												<option value="Nuevo Colón">Nuevo Colón</option>
+												<option value="Oicatá">Oicatá</option>
+												<option value="Otanche">Otanche</option>
+												<option value="Pachavita">Pachavita</option>
+												<option value="Páez">Páez</option>
+												<option value="Paipa">Paipa</option>
+												<option value="Pajarito">Pajarito</option>
+												<option value="Panqueba">Panqueba</option>
+												<option value="Pauna">Pauna</option>
+												<option value="Paya">Paya</option>
+												<option value="Paz de Río">Paz de Río</option>
+												<option value="Pesca">Pesca</option>
+												<option value="Pisba">Pisba</option>
+												<option value="Puerto Boyacá">Puerto Boyacá</option>
+												<option value="Quípama">Quípama</option>
+												<option value="Ramiriquí">Ramiriquí</option>
+												<option value="Ráquira">Ráquira</option>
+												<option value="Rondón">Rondón</option>
+												<option value="Saboyá">Saboyá</option>
+												<option value="Sáchica">Sáchica</option>
+												<option value="Samacá">Samacá</option>
+												<option value="San Eduardo">San Eduardo</option>
+												<option value="San José de Pare">San José de Pare</option>
+												<option value="San Luis de Gaceno">San Luis de Gaceno</option>
+												<option value="San Mateo">San Mateo</option>
+												<option value="San Miguel de Sema">San Miguel de Sema</option>
+												<option value="San Pablo de Borbur">San Pablo de Borbur</option>
+												<option value="Santa María">Santa María</option>
+												<option value="Santa Rosa de Viterbo">Santa Rosa de Viterbo</option>
+												<option value="Santa Sofía">Santa Sofía</option>
+												<option value="Santana">Santana</option>
+												<option value="Sativanorte">Sativanorte</option>
+												<option value="Sativasur">Sativasur</option>
+												<option value="Siachoque">Siachoque</option>
+												<option value="Soatá">Soatá</option>
+												<option value="Socha">Socha</option>
+												<option value="Socotá">Socotá</option>
+												<option value="Sogamoso">Sogamoso</option>
+												<option value="Somondoco">Somondoco</option>
+												<option value="Sora">Sora</option>
+												<option value="Soracá">Soracá</option>
+												<option value="Sotaquirá">Sotaquirá</option>
+												<option value="Tasco">Tasco</option>
+												<option value="Tenza">Tenza</option>
+												<option value="Tibaná">Tibaná</option>
+												<option value="Tibasosa">Tibasosa</option>
+												<option value="Tinjacá">Tinjacá</option>
+												<option value="Tipacoque">Tipacoque</option>
+												<option value="Toca">Toca</option>
+												<option value="Togüí">Togüí</option>
+												<option value="Tópaga">Tópaga</option>
+												<option value="Tota">Tota</option>
+												<option value="Tunja">Tunja</option>
+												<option value="Tuta">Tuta</option>
+												<option value="Tutazá">Tutazá</option>
+												<option value="Umbita">Umbita</option>
+												<option value="Ventaquemada">Ventaquemada</option>
+												<option value="Villa de Leyva">Villa de Leyva</option>
+												<option value="Viracachá">Viracachá</option>
+												<option value="Zetaquirá">Zetaquirá</option>
+												<!-- Caldas -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Caldas</option>
+
+												<option value="Aguadas">Aguadas</option>
+												<option value="Anserma">Anserma</option>
+												<option value="Aranzazu">Aranzazu</option>
+												<option value="Belalcázar">Belalcázar</option>
+												<option value="Chinchiná">Chinchiná</option>
+												<option value="Filadelfia">Filadelfia</option>
+												<option value="La Dorada">La Dorada</option>
+												<option value="La Merced">La Merced</option>
+												<option value="Manizales">Manizales</option>
+												<option value="Manzanares">Manzanares</option>
+												<option value="Marmato">Marmato</option>
+												<option value="Marquetalia">Marquetalia</option>
+												<option value="Marulanda">Marulanda</option>
+												<option value="Neira">Neira</option>
+												<option value="Norcasia">Norcasia</option>
+												<option value="Pácora">Pácora</option>
+												<option value="Palestina">Palestina</option>
+												<option value="Pensilvania">Pensilvania</option>
+												<option value="Riosucio">Riosucio</option>
+												<option value="Risaralda">Risaralda</option>
+												<option value="Salamina">Salamina</option>
+												<option value="Samaná">Samaná</option>
+												<option value="San José">San José</option>
+												<option value="Supía">Supía</option>
+												<option value="Victoria">Victoria</option>
+												<option value="Villamaría">Villamaría</option>
+												<option value="Viterbo">Viterbo</option>
+												<!-- Caquetá -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Caquetá</option>
+
+												<option value="Albania">Albania</option>
+												<option value="Belén de los Andaquíes">Belén de los Andaquíes</option>
+												<option value="Cartagena del Chairá">Cartagena del Chairá</option>
+												<option value="Curillo">Curillo</option>
+												<option value="El Doncello">El Doncello</option>
+												<option value="El Paujil">El Paujil</option>
+												<option value="Florencia">Florencia</option>
+												<option value="La Montañita">La Montañita</option>
+												<option value="Milán">Milán</option>
+												<option value="Morelia">Morelia</option>
+												<option value="Puerto Rico">Puerto Rico</option>
+												<option value="San José del Fragua">San José del Fragua</option>
+												<option value="San Vicente del Caguán">San Vicente del Caguán</option>
+												<option value="Solano">Solano</option>
+												<option value="Solita">Solita</option>
+												<option value="Valparaíso">Valparaíso</option>
+												<!-- Casanare -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Casanare</option>
+
+												<option value="Aguazul">Aguazul</option>
+												<option value="Chámeza">Chámeza</option>
+												<option value="Hato Corozal">Hato Corozal</option>
+												<option value="La Salina">La Salina</option>
+												<option value="Maní">Maní</option>
+												<option value="Monterrey">Monterrey</option>
+												<option value="Nunchía">Nunchía</option>
+												<option value="Orocué">Orocué</option>
+												<option value="Paz de Ariporo">Paz de Ariporo</option>
+												<option value="Pore">Pore</option>
+												<option value="Recetor">Recetor</option>
+												<option value="Sabanalarga">Sabanalarga</option>
+												<option value="Sacama">Sacama</option>
+												<option value="San Luis de Palenque">San Luis de Palenque</option>
+												<option value="Tauramena">Tauramena</option>
+												<option value="Trinidad">Trinidad</option>
+												<option value="Villanueva">Villanueva</option>
+												<!-- Cauca -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Cauca</option>
+
+												<option value="Almaguer">Almaguer</option>
+												<option value="Argelia">Argelia</option>
+												<option value="Balboa">Balboa</option>
+												<option value="Bolívar">Bolívar</option>
+												<option value="Buenos Aires">Buenos Aires</option>
+												<option value="Cajibío">Cajibío</option>
+												<option value="Caldono">Caldono</option>
+												<option value="Caloto">Caloto</option>
+												<option value="Corinto">Corinto</option>
+												<option value="El Tambo">El Tambo</option>
+												<option value="Florencia">Florencia</option>
+												<option value="Guachené">Guachené</option>
+												<option value="Guapi">Guapi</option>
+												<option value="Inzá">Inzá</option>
+												<option value="Jambaló">Jambaló</option>
+												<option value="La Sierra">La Sierra</option>
+												<option value="La Vega">La Vega</option>
+												<option value="López de Micay">López de Micay</option>
+												<option value="Mercaderes">Mercaderes</option>
+												<option value="Miranda">Miranda</option>
+												<option value="Morales">Morales</option>
+												<option value="Padilla">Padilla</option>
+												<option value="Patía">Patía</option>
+												<option value="Piamonte">Piamonte</option>
+												<option value="Piendamó">Piendamó</option>
+												<option value="Popayán">Popayán</option>
+												<option value="Puerto Tejada">Puerto Tejada</option>
+												<option value="Puracé">Puracé</option>
+												<option value="Rosas">Rosas</option>
+												<option value="San Sebastián">San Sebastián</option>
+												<option value="Santander de Quilichao">Santander de Quilichao</option>
+												<option value="Silvia">Silvia</option>
+												<option value="Sotará">Sotará</option>
+												<option value="Suárez">Suárez</option>
+												<option value="Sucre">Sucre</option>
+												<option value="Timbío">Timbío</option>
+												<option value="Timbiquí">Timbiquí</option>
+												<option value="Toribío">Toribío</option>
+												<option value="Totoró">Totoró</option>
+												<option value="Villa Rica">Villa Rica</option>
+												<!-- Cesar -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Cesar</option>
+
+												<option value="Aguachica">Aguachica</option>
+												<option value="Agustín Codazzi">Agustín Codazzi</option>
+												<option value="Astrea">Astrea</option>
+												<option value="Becerril">Becerril</option>
+												<option value="Bosconia">Bosconia</option>
+												<option value="Chimichagua">Chimichagua</option>
+												<option value="Chiriguaná">Chiriguaná</option>
+												<option value="Curumaní">Curumaní</option>
+												<option value="El Copey">El Copey</option>
+												<option value="El Paso">El Paso</option>
+												<option value="Gamarra">Gamarra</option>
+												<option value="González">González</option>
+												<option value="La Gloria">La Gloria</option>
+												<option value="La Jagua de Ibirico">La Jagua de Ibirico</option>
+												<option value="Manaure Balcón del Cesar">Manaure Balcón del Cesar
+												</option>
+												<option value="Pailitas">Pailitas</option>
+												<option value="Pelaya">Pelaya</option>
+												<option value="Pueblo Bello">Pueblo Bello</option>
+												<option value="Río de Oro">Río de Oro</option>
+												<option value="San Alberto">San Alberto</option>
+												<option value="San Diego">San Diego</option>
+												<option value="San Martín">San Martín</option>
+												<option value="Tamalameque">Tamalameque</option>
+												<option value="Valledupar">Valledupar</option>
+												<!-- Chocó -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Chocó</option>
+
+												<option value="Acandí">Acandí</option>
+												<option value="Alto Baudó">Alto Baudó</option>
+												<option value="Atrato">Atrato</option>
+												<option value="Bagadó">Bagadó</option>
+												<option value="Bahía Solano">Bahía Solano</option>
+												<option value="Bajo Baudó">Bajo Baudó</option>
+												<option value="Belén de Bajirá">Belén de Bajirá</option>
+												<option value="Bojayá">Bojayá</option>
+												<option value="Cantón de San Pablo">Cantón de San Pablo</option>
+												<option value="Cértegui">Cértegui</option>
+												<option value="Condoto">Condoto</option>
+												<option value="El Carmen de Atrato">El Carmen de Atrato</option>
+												<option value="El Carmen de Darién">El Carmen de Darién</option>
+												<option value="Istmina">Istmina</option>
+												<option value="Juradó">Juradó</option>
+												<option value="Lloró">Lloró</option>
+												<option value="Medio Atrato">Medio Atrato</option>
+												<option value="Medio Baudó">Medio Baudó</option>
+												<option value="Medio San Juan">Medio San Juan</option>
+												<option value="Novita">Novita</option>
+												<option value="Nuquí">Nuquí</option>
+												<option value="Quibdó">Quibdó</option>
+												<option value="Riosucio">Riosucio</option>
+												<option value="San José del Palmar">San José del Palmar</option>
+												<option value="Sipí">Sipí</option>
+												<option value="Tadó">Tadó</option>
+												<option value="Unguía">Unguía</option>
+												<option value="Unión Panamericana">Unión Panamericana</option>
+												<!-- Córdoba -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Córdoba</option>
+
+												<option value="Ayapel">Ayapel</option>
+												<option value="Buenavista">Buenavista</option>
+												<option value="Canalete">Canalete</option>
+												<option value="Cereté">Cereté</option>
+												<option value="Chimá">Chimá</option>
+												<option value="Chinú">Chinú</option>
+												<option value="Ciénaga de Oro">Ciénaga de Oro</option>
+												<option value="Cotorra">Cotorra</option>
+												<option value="La Apartada">La Apartada</option>
+												<option value="Lorica">Lorica</option>
+												<option value="Los Córdobas">Los Córdobas</option>
+												<option value="Momil">Momil</option>
+												<option value="Montelíbano">Montelíbano</option>
+												<option value="Montería">Montería</option>
+												<option value="Moñitos">Moñitos</option>
+												<option value="Planeta Rica">Planeta Rica</option>
+												<option value="Pueblo Nuevo">Pueblo Nuevo</option>
+												<option value="Puerto Escondido">Puerto Escondido</option>
+												<option value="Puerto Libertador">Puerto Libertador</option>
+												<option value="Purísima">Purísima</option>
+												<option value="Sahagún">Sahagún</option>
+												<option value="San Andrés de Sotavento">San Andrés de Sotavento</option>
+												<option value="San Antero">San Antero</option>
+												<option value="San Bernardo del Viento">San Bernardo del Viento</option>
+												<option value="San Carlos">San Carlos</option>
+												<option value="San José de Uré">San José de Uré</option>
+												<option value="San Pelayo">San Pelayo</option>
+												<option value="Tierralta">Tierralta</option>
+												<option value="Tuchín">Tuchín</option>
+												<option value="Valencia">Valencia</option>
+												<!-- Cundinamarca -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Cundinamarca</option>
+
+												<option value="Agua de Dios">Agua de Dios</option>
+												<option value="Albán">Albán</option>
+												<option value="Anapoima">Anapoima</option>
+												<option value="Anolaima">Anolaima</option>
+												<option value="Arbeláez">Arbeláez</option>
+												<option value="Beltrán">Beltrán</option>
+												<option value="Bituima">Bituima</option>
+												<option value="Bojacá">Bojacá</option>
+												<option value="Cabrera">Cabrera</option>
+												<option value="Cachipay">Cachipay</option>
+												<option value="Cajicá">Cajicá</option>
+												<option value="Caparrapí">Caparrapí</option>
+												<option value="Caqueza">Caqueza</option>
+												<option value="Carmen de Carupa">Carmen de Carupa</option>
+												<option value="Chaguaní">Chaguaní</option>
+												<option value="Chía">Chía</option>
+												<option value="Chipaque">Chipaque</option>
+												<option value="Choachí">Choachí</option>
+												<option value="Chocontá">Chocontá</option>
+												<option value="Cogua">Cogua</option>
+												<option value="Cota">Cota</option>
+												<option value="Cucunubá">Cucunubá</option>
+												<option value="El Colegio">El Colegio</option>
+												<option value="El Peñón">El Peñón</option>
+												<option value="El Rosal">El Rosal</option>
+												<option value="Facatativá">Facatativá</option>
+												<option value="Fómeque">Fómeque</option>
+												<option value="Fosca">Fosca</option>
+												<option value="Funza">Funza</option>
+												<option value="Fúquene">Fúquene</option>
+												<option value="Fusagasugá">Fusagasugá</option>
+												<option value="Gachala">Gachalá</option>
+												<option value="Gachancipá">Gachancipá</option>
+												<option value="Gachetá">Gachetá</option>
+												<option value="Gama">Gama</option>
+												<option value="Girardot">Girardot</option>
+												<option value="Granada">Granada</option>
+												<option value="Guachetá">Guachetá</option>
+												<option value="Guaduas">Guaduas</option>
+												<option value="Guasca">Guasca</option>
+												<option value="Guataquí">Guataquí</option>
+												<option value="Guatavita">Guatavita</option>
+												<option value="Guayabal de Síquima">Guayabal de Síquima</option>
+												<option value="Guayabetal">Guayabetal</option>
+												<option value="Gutiérrez">Gutiérrez</option>
+												<option value="Jerusalén">Jerusalén</option>
+												<option value="Junín">Junín</option>
+												<option value="La Calera">La Calera</option>
+												<option value="La Mesa">La Mesa</option>
+												<option value="La Palma">La Palma</option>
+												<option value="La Peña">La Peña</option>
+												<option value="La Vega">La Vega</option>
+												<option value="Lenguazaque">Lenguazaque</option>
+												<option value="Machetá">Machetá</option>
+												<option value="Madrid">Madrid</option>
+												<option value="Manta">Manta</option>
+												<option value="Medina">Medina</option>
+												<option value="Mosquera">Mosquera</option>
+												<option value="Nariño">Nariño</option>
+												<option value="Nemocón">Nemocón</option>
+												<option value="Nilo">Nilo</option>
+												<option value="Nimaima">Nimaima</option>
+												<option value="Nocaima">Nocaima</option>
+												<option value="Pacho">Pacho</option>
+												<option value="Paime">Paime</option>
+												<option value="Pandi">Pandi</option>
+												<option value="Paratebueno">Paratebueno</option>
+												<option value="Pasca">Pasca</option>
+												<option value="Puerto Salgar">Puerto Salgar</option>
+												<option value="Pulí">Pulí</option>
+												<option value="Quebradanegra">Quebradanegra</option>
+												<option value="Quetame">Quetame</option>
+												<option value="Quipile">Quipile</option>
+												<option value="Apulo">Apulo</option>
+												<option value="Ricaurte">Ricaurte</option>
+												<option value="San Antonio del Tequendama">San Antonio del Tequendama
+												</option>
+												<option value="San Bernardo">San Bernardo</option>
+												<option value="San Cayetano">San Cayetano</option>
+												<option value="San Francisco">San Francisco</option>
+												<option value="San Juan de Rioseco">San Juan de Rioseco</option>
+												<option value="Sasaima">Sasaima</option>
+												<option value="Sesquilé">Sesquilé</option>
+												<option value="Sibaté">Sibaté</option>
+												<option value="Silvania">Silvania</option>
+												<option value="Simijaca">Simijaca</option>
+												<option value="Soacha">Soacha</option>
+												<option value="Sopó">Sopó</option>
+												<option value="Subachoque">Subachoque</option>
+												<option value="Suesca">Suesca</option>
+												<option value="Supatá">Supatá</option>
+												<option value="Susa">Susa</option>
+												<option value="Sutatausa">Sutatausa</option>
+												<option value="Tabio">Tabio</option>
+												<option value="Tausa">Tausa</option>
+												<option value="Tena">Tena</option>
+												<option value="Tenjo">Tenjo</option>
+												<option value="Tibacuy">Tibacuy</option>
+												<option value="Tibirita">Tibirita</option>
+												<option value="Tocaima">Tocaima</option>
+												<option value="Tocancipá">Tocancipá</option>
+												<option value="Topaipí">Topaipí</option>
+												<option value="Ubalá">Ubalá</option>
+												<option value="Ubaque">Ubaque</option>
+												<option value="Ubaté">Ubaté</option>
+												<option value="Une">Une</option>
+												<option value="Útica">Útica</option>
+												<option value="Venecia">Venecia</option>
+												<option value="Vergara">Vergara</option>
+												<option value="Vianí">Vianí</option>
+												<option value="Villagómez">Villagómez</option>
+												<option value="Villapinzón">Villapinzón</option>
+												<option value="Villeta">Villeta</option>
+												<option value="Viotá">Viotá</option>
+												<option value="Yacopí">Yacopí</option>
+												<option value="Zipacón">Zipacón</option>
+												<option value="Zipaquirá">Zipaquirá</option>
+												<!-- Guainía -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Guainía</option>
+
+												<option value="Barranco Minas">Barranco Minas</option>
+												<option value="Cacahual">Cacahual</option>
+												<option value="Inírida">Inírida</option>
+												<option value="Mapiripana">Mapiripana</option>
+												<option value="Morichal">Morichal</option>
+												<option value="Pana Pana">Pana Pana</option>
+												<option value="Puerto Colombia">Puerto Colombia</option>
+												<option value="San Felipe">San Felipe</option>
+												<!-- Guaviare -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Guaviare</option>
+
+												<option value="Calamar">Calamar</option>
+												<option value="El Retorno">El Retorno</option>
+												<option value="Miraflores">Miraflores</option>
+												<option value="San José del Guaviare">San José del Guaviare</option>
+												<!-- Huila -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Huila</option>
+
+												<option value="Acevedo">Acevedo</option>
+												<option value="Agrado">Agrado</option>
+												<option value="Aipe">Aipe</option>
+												<option value="Algeciras">Algeciras</option>
+												<option value="Altamira">Altamira</option>
+												<option value="Baraya">Baraya</option>
+												<option value="Campoalegre">Campoalegre</option>
+												<option value="Colombia">Colombia</option>
+												<option value="Elías">Elías</option>
+												<option value="Garzón">Garzón</option>
+												<option value="Gigante">Gigante</option>
+												<option value="Guadalupe">Guadalupe</option>
+												<option value="Hobo">Hobo</option>
+												<option value="Íquira">Íquira</option>
+												<option value="Isnos">Isnos</option>
+												<option value="La Argentina">La Argentina</option>
+												<option value="La Plata">La Plata</option>
+												<option value="Nátaga">Nátaga</option>
+												<option value="Neiva">Neiva</option>
+												<option value="Oporapa">Oporapa</option>
+												<option value="Paicol">Paicol</option>
+												<option value="Palermo">Palermo</option>
+												<option value="Palestina">Palestina</option>
+												<option value="Pital">Pital</option>
+												<option value="Pitalito">Pitalito</option>
+												<option value="Rivera">Rivera</option>
+												<option value="Saladoblanco">Saladoblanco</option>
+												<option value="San Agustín">San Agustín</option>
+												<option value="Santa María">Santa María</option>
+												<option value="Suaza">Suaza</option>
+												<option value="Tarqui">Tarqui</option>
+												<option value="Tello">Tello</option>
+												<option value="Teruel">Teruel</option>
+												<option value="Tesalia">Tesalia</option>
+												<option value="Timaná">Timaná</option>
+												<option value="Villavieja">Villavieja</option>
+												<option value="Yaguará">Yaguará</option>
+												<!-- La Guajira -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>La
+													Guajira</option>
+
+												<option value="Albania">Albania</option>
+												<option value="Barrancas">Barrancas</option>
+												<option value="Dibulla">Dibulla</option>
+												<option value="Distracción">Distracción</option>
+												<option value="El Molino">El Molino</option>
+												<option value="Fonseca">Fonseca</option>
+												<option value="Hatonuevo">Hatonuevo</option>
+												<option value="La Jagua del Pilar">La Jagua del Pilar</option>
+												<option value="Maicao">Maicao</option>
+												<option value="Manaure">Manaure</option>
+												<option value="Riohacha">Riohacha</option>
+												<option value="San Juan del Cesar">San Juan del Cesar</option>
+												<option value="Uribia">Uribia</option>
+												<option value="Urumita">Urumita</option>
+												<option value="Villanueva">Villanueva</option>
+												<!-- Magdalena -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Magdalena</option>
+
+												<option value="Algarrobo">Algarrobo</option>
+												<option value="Aracataca">Aracataca</option>
+												<option value="Ariguaní">Ariguaní</option>
+												<option value="Cerro de San Antonio">Cerro de San Antonio</option>
+												<option value="Chibolo">Chibolo</option>
+												<option value="Ciénaga">Ciénaga</option>
+												<option value="Concordia">Concordia</option>
+												<option value="El Banco">El Banco</option>
+												<option value="El Piñón">El Piñón</option>
+												<option value="El Retén">El Retén</option>
+												<option value="Fundación">Fundación</option>
+												<option value="Guamal">Guamal</option>
+												<option value="Nueva Granada">Nueva Granada</option>
+												<option value="Pedraza">Pedraza</option>
+												<option value="Pijiño del Carmen">Pijiño del Carmen</option>
+												<option value="Pivijay">Pivijay</option>
+												<option value="Plato">Plato</option>
+												<option value="Pueblo Viejo">Pueblo Viejo</option>
+												<option value="Remolino">Remolino</option>
+												<option value="Sabanas de San Ángel">Sabanas de San Ángel</option>
+												<option value="Salamina">Salamina</option>
+												<option value="San Sebastián de Buenavista">San Sebastián de Buenavista
+												</option>
+												<option value="Santa Ana">Santa Ana</option>
+												<option value="Santa Bárbara de Pinto">Santa Bárbara de Pinto</option>
+												<option value="Santa Marta">Santa Marta</option>
+												<option value="Sitionuevo">Sitionuevo</option>
+												<option value="Tenerife">Tenerife</option>
+												<option value="Zapayán">Zapayán</option>
+												<option value="Zona Bananera">Zona Bananera</option>
+												<!-- Meta -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Meta</option>
+
+												<option value="Acacías">Acacías</option>
+												<option value="Barranca de Upía">Barranca de Upía</option>
+												<option value="Cabuyaro">Cabuyaro</option>
+												<option value="Castilla la Nueva">Castilla la Nueva</option>
+												<option value="Cubarral">Cubarral</option>
+												<option value="Cumaral">Cumaral</option>
+												<option value="El Calvario">El Calvario</option>
+												<option value="El Castillo">El Castillo</option>
+												<option value="El Dorado">El Dorado</option>
+												<option value="Fuente de Oro">Fuente de Oro</option>
+												<option value="Granada">Granada</option>
+												<option value="Guamal">Guamal</option>
+												<option value="La Macarena">La Macarena</option>
+												<option value="La Uribe">La Uribe</option>
+												<option value="Lejanías">Lejanías</option>
+												<option value="Mapiripán">Mapiripán</option>
+												<option value="Mesetas">Mesetas</option>
+												<option value="Puerto Concordia">Puerto Concordia</option>
+												<option value="Puerto Gaitán">Puerto Gaitán</option>
+												<option value="Puerto Lleras">Puerto Lleras</option>
+												<option value="Puerto López">Puerto López</option>
+												<option value="Puerto Rico">Puerto Rico</option>
+												<option value="Restrepo">Restrepo</option>
+												<option value="San Carlos de Guaroa">San Carlos de Guaroa</option>
+												<option value="San Juan de Arama">San Juan de Arama</option>
+												<option value="San Juanito">San Juanito</option>
+												<option value="San Martín">San Martín</option>
+												<option value="Villavicencio">Villavicencio</option>
+												<option value="Vista Hermosa">Vista Hermosa</option>
+												<!-- Nariño -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Nariño</option>
+
+												<option value="Albán">Albán</option>
+												<option value="Aldana">Aldana</option>
+												<option value="Ancuya">Ancuya</option>
+												<option value="Arboleda">Arboleda</option>
+												<option value="Barbacoas">Barbacoas</option>
+												<option value="Belén">Belén</option>
+												<option value="Buesaco">Buesaco</option>
+												<option value="Chachagüí">Chachagüí</option>
+												<option value="Colón">Colón</option>
+												<option value="Consacá">Consacá</option>
+												<option value="Contadero">Contadero</option>
+												<option value="Córdoba">Córdoba</option>
+												<option value="Cuaspud">Cuaspud</option>
+												<option value="Cumbal">Cumbal</option>
+												<option value="Cumbitara">Cumbitara</option>
+												<option value="El Charco">El Charco</option>
+												<option value="El Peñol">El Peñol</option>
+												<option value="El Rosario">El Rosario</option>
+												<option value="El Tablón">El Tablón</option>
+												<option value="El Tambo">El Tambo</option>
+												<option value="Francisco Pizarro">Francisco Pizarro</option>
+												<option value="Funes">Funes</option>
+												<option value="Guachucal">Guachucal</option>
+												<option value="Guaitarilla">Guaitarilla</option>
+												<option value="Gualmatán">Gualmatán</option>
+												<option value="Iles">Iles</option>
+												<option value="Imués">Imués</option>
+												<option value="Ipiales">Ipiales</option>
+												<option value="La Cruz">La Cruz</option>
+												<option value="La Florida">La Florida</option>
+												<option value="La Llanada">La Llanada</option>
+												<option value="La Tola">La Tola</option>
+												<option value="La Unión">La Unión</option>
+												<option value="Leiva">Leiva</option>
+												<option value="Linares">Linares</option>
+												<option value="Los Andes">Los Andes</option>
+												<option value="Magüí">Magüí</option>
+												<option value="Mallama">Mallama</option>
+												<option value="Mosquera">Mosquera</option>
+												<option value="Nariño">Nariño</option>
+												<option value="Olaya Herrera">Olaya Herrera</option>
+												<option value="Ospina">Ospina</option>
+												<option value="Policarpa">Policarpa</option>
+												<option value="Potosí">Potosí</option>
+												<option value="Providencia">Providencia</option>
+												<option value="Puerres">Puerres</option>
+												<option value="Pupiales">Pupiales</option>
+												<option value="Ricaurte">Ricaurte</option>
+												<option value="Roberto Payán">Roberto Payán</option>
+												<option value="Samaniego">Samaniego</option>
+												<option value="San Bernardo">San Bernardo</option>
+												<option value="San Lorenzo">San Lorenzo</option>
+												<option value="San Pablo">San Pablo</option>
+												<option value="San Pedro de Cartago">San Pedro de Cartago</option>
+												<option value="Sandona">Sandona</option>
+												<option value="Santa Bárbara">Santa Bárbara</option>
+												<option value="Santacruz">Santacruz</option>
+												<option value="Sapuyes">Sapuyes</option>
+												<option value="Taminango">Taminango</option>
+												<option value="Tangua">Tangua</option>
+												<option value="Túquerres">Túquerres</option>
+												<option value="Túlin">Túlin</option>
+												<option value="Yacuanquer">Yacuanquer</option>
+												<option value="Policarpa">Policarpa</option>
+												<!-- Norte de Santander -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Norte de Santander</option>
+
+												<option value="Abrego">Abrego</option>
+												<option value="Arboledas">Arboledas</option>
+												<option value="Bochalema">Bochalema</option>
+												<option value="Bucarasica">Bucarasica</option>
+												<option value="Cáchira">Cáchira</option>
+												<option value="Cúcuta">Cúcuta</option>
+												<option value="Chinácota">Chinácota</option>
+												<option value="Chitagá">Chitagá</option>
+												<option value="Convención">Convención</option>
+												<option value="Cucutilla">Cucutilla</option>
+												<option value="Durania">Durania</option>
+												<option value="El Carmen">El Carmen</option>
+												<option value="El Tarra">El Tarra</option>
+												<option value="El Zulia">El Zulia</option>
+												<option value="Gramalote">Gramalote</option>
+												<option value="Hacarí">Hacarí</option>
+												<option value="Herrán">Herrán</option>
+												<option value="Labateca">Labateca</option>
+												<option value="La Esperanza">La Esperanza</option>
+												<option value="La Playa">La Playa</option>
+												<option value="Los Patios">Los Patios</option>
+												<option value="Lourdes">Lourdes</option>
+												<option value="Mutiscua">Mutiscua</option>
+												<option value="Ocaña">Ocaña</option>
+												<option value="Pamplona">Pamplona</option>
+												<option value="Pamplonita">Pamplonita</option>
+												<option value="Puerto Santander">Puerto Santander</option>
+												<option value="Ragonvalia">Ragonvalia</option>
+												<option value="Salazar">Salazar</option>
+												<option value="San Calixto">San Calixto</option>
+												<option value="San Cayetano">San Cayetano</option>
+												<option value="Santiago">Santiago</option>
+												<option value="Sardinata">Sardinata</option>
+												<option value="Silos">Silos</option>
+												<option value="Teorama">Teorama</option>
+												<option value="Tibú">Tibú</option>
+												<option value="Toledo">Toledo</option>
+												<option value="Villa Caro">Villa Caro</option>
+												<option value="Villa del Rosario">Villa del Rosario</option>
+												<!-- Putumayo -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Putumayo</option>
+
+												<option value="Colón">Colón</option>
+												<option value="Mocoa">Mocoa</option>
+												<option value="Orito">Orito</option>
+												<option value="Puerto Asís">Puerto Asís</option>
+												<option value="Puerto Caicedo">Puerto Caicedo</option>
+												<option value="Puerto Guzmán">Puerto Guzmán</option>
+												<option value="Puerto Leguízamo">Puerto Leguízamo</option>
+												<option value="San Francisco">San Francisco</option>
+												<option value="San Miguel">San Miguel</option>
+												<option value="Santiago">Santiago</option>
+												<option value="Sibundoy">Sibundoy</option>
+												<option value="Valle del Guamuez">Valle del Guamuez</option>
+												<option value="Villagarzón">Villagarzón</option>
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Quindío</option>
+
+												<!-- Quindío -->
+												<option value="Armenia">Armenia</option>
+												<option value="Calarcá">Calarcá</option>
+												<option value="Circasia">Circasia</option>
+												<option value="Córdoba">Córdoba</option>
+												<option value="Filandia">Filandia</option>
+												<option value="Génova">Génova</option>
+												<option value="La Tebaida">La Tebaida</option>
+												<option value="Montenegro">Montenegro</option>
+												<option value="Pijao">Pijao</option>
+												<option value="Quimbaya">Quimbaya</option>
+												<option value="Salento">Salento</option>
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Risaralda</option>
+
+												<!-- Risaralda -->
+												<option value="Apía">Apía</option>
+												<option value="Balboa">Balboa</option>
+												<option value="Belén de Umbría">Belén de Umbría</option>
+												<option value="Dosquebradas">Dosquebradas</option>
+												<option value="Guática">Guática</option>
+												<option value="La Celia">La Celia</option>
+												<option value="La Virginia">La Virginia</option>
+												<option value="Marcelia">Marcelia</option>
+												<option value="Pereira">Pereira</option>
+												<option value="Pueblo Rico">Pueblo Rico</option>
+												<option value="Quinchía">Quinchía</option>
+												<option value="Santa Rosa de Cabal">Santa Rosa de Cabal</option>
+												<option value="Santuario">Santuario</option>
+												<option style="background-color: rgb(206, 206, 206);" value disabled>San
+													Andrés y Providencia</option>
+
+												<!-- San Andrés y Providencia -->
+												<option value="Providencia">Providencia</option>
+												<option value="San Andrés">San Andrés</option>
+												<option value="Santa Catalina">Santa Catalina</option>
+												<!-- Santander -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Santander</option>
+
+												<option value="Aguada">Aguada</option>
+												<option value="Albania">Albania</option>
+												<option value="Aratoca">Aratoca</option>
+												<option value="Barbosa">Barbosa</option>
+												<option value="Barichara">Barichara</option>
+												<option value="Barrancabermeja">Barrancabermeja</option>
+												<option value="Betulia">Betulia</option>
+												<option value="Bolívar">Bolívar</option>
+												<option value="Bucaramanga">Bucaramanga</option>
+												<option value="Cabrera">Cabrera</option>
+												<option value="California">California</option>
+												<option value="Capitanejo">Capitanejo</option>
+												<option value="Carcasí">Carcasí</option>
+												<option value="Cepitá">Cepitá</option>
+												<option value="Cerrito">Cerrito</option>
+												<option value="Charalá">Charalá</option>
+												<option value="Charta">Charta</option>
+												<option value="Chima">Chima</option>
+												<option value="Chipatá">Chipatá</option>
+												<option value="Cimitarra">Cimitarra</option>
+												<option value="Concepción">Concepción</option>
+												<option value="Confines">Confines</option>
+												<option value="Contratación">Contratación</option>
+												<option value="Coromoro">Coromoro</option>
+												<option value="Curití">Curití</option>
+												<option value="El Carmen de Chucurí">El Carmen de Chucurí</option>
+												<option value="El Guacamayo">El Guacamayo</option>
+												<option value="El Peñón">El Peñón</option>
+												<option value="El Playón">El Playón</option>
+												<option value="Encino">Encino</option>
+												<option value="Enciso">Enciso</option>
+												<option value="Florián">Florián</option>
+												<option value="Floridablanca">Floridablanca</option>
+												<option value="Galán">Galán</option>
+												<option value="Gambita">Gambita</option>
+												<option value="Girón">Girón</option>
+												<option value="Guaca">Guaca</option>
+												<option value="Guadalupe">Guadalupe</option>
+												<option value="Guapota">Guapota</option>
+												<option value="Guavatá">Guavatá</option>
+												<option value="Güepsa">Güepsa</option>
+												<option value="Hato">Hato</option>
+												<option value="Jesús María">Jesús María</option>
+												<option value="Jordán">Jordán</option>
+												<option value="La Belleza">La Belleza</option>
+												<option value="La Paz">La Paz</option>
+												<option value="Landázuri">Landázuri</option>
+												<option value="Lebrija">Lebrija</option>
+												<option value="Los Santos">Los Santos</option>
+												<option value="Macaravita">Macaravita</option>
+												<option value="Málaga">Málaga</option>
+												<option value="Matanza">Matanza</option>
+												<option value="Mogotes">Mogotes</option>
+												<option value="Molagavita">Molagavita</option>
+												<option value="Ocamonte">Ocamonte</option>
+												<option value="Oiba">Oiba</option>
+												<option value="Onzaga">Onzaga</option>
+												<option value="Palmar">Palmar</option>
+												<option value="Palmas del Socorro">Palmas del Socorro</option>
+												<option value="Páramo">Páramo</option>
+												<option value="Piedecuesta">Piedecuesta</option>
+												<option value="Pinchote">Pinchote</option>
+												<option value="Puente Nacional">Puente Nacional</option>
+												<option value="San Andrés">San Andrés</option>
+												<option value="San Benito">San Benito</option>
+												<option value="San Gil">San Gil</option>
+												<option value="San Joaquín">San Joaquín</option>
+												<option value="San José de Miranda">San José de Miranda</option>
+												<option value="San Miguel">San Miguel</option>
+												<option value="San Vicente de Chucurí">San Vicente de Chucurí</option>
+												<option value="Santa Bárbara">Santa Bárbara</option>
+												<option value="Santa Helena del Opón">Santa Helena del Opón</option>
+												<option value="Simacota">Simacota</option>
+												<option value="Socorro">Socorro</option>
+												<option value="Suaita">Suaita</option>
+												<option value="Sucre">Sucre</option>
+												<option value="Suratá">Suratá</option>
+												<option value="Tona">Tona</option>
+												<option value="Valle de San José">Valle de San José</option>
+												<option value="Vélez">Vélez</option>
+												<option value="Vetas">Vetas</option>
+												<option value="Villanueva">Villanueva</option>
+												<option value="Zapatoca">Zapatoca</option>
+												<!-- Sucre -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Sucre</option>
+
+												<option value="Buenavista">Buenavista</option>
+												<option value="Sincelejo">Sincelejo</option>
+												<option value="Caimito">Caimito</option>
+												<option value="Coloso">Coloso</option>
+												<option value="Corozal">Corozal</option>
+												<option value="Coveñas">Coveñas</option>
+												<option value="Chalán">Chalán</option>
+												<option value="El Roble">El Roble</option>
+												<option value="Galeras">Galeras</option>
+												<option value="Guaranda">Guaranda</option>
+												<option value="La Unión">La Unión</option>
+												<option value="Los Palmitos">Los Palmitos</option>
+												<option value="Majagual">Majagual</option>
+												<option value="Morroa">Morroa</option>
+												<option value="Ovejas">Ovejas</option>
+												<option value="Sampués">Sampués</option>
+												<option value="San Benito Abad">San Benito Abad</option>
+												<option value="San Juan de Betulia">San Juan de Betulia</option>
+												<option value="San Marcos">San Marcos</option>
+												<option value="San Onofre">San Onofre</option>
+												<option value="San Pedro">San Pedro</option>
+												<option value="Sincé">Sincé</option>
+												<option value="Sucre">Sucre</option>
+												<option value="Tolú">Tolú</option>
+												<option value="Toluviejo">Toluviejo</option>
+												<!-- Tolima -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Tolima</option>
+
+												<option value="Alpujarra">Alpujarra</option>
+												<option value="Alvarado">Alvarado</option>
+												<option value="Ambalema">Ambalema</option>
+												<option value="Anzoátegui">Anzoátegui</option>
+												<option value="Armero">Armero</option>
+												<option value="Ataco">Ataco</option>
+												<option value="Cajamarca">Cajamarca</option>
+												<option value="Carmen de Apicalá">Carmen de Apicalá</option>
+												<option value="Casabianca">Casabianca</option>
+												<option value="Chaparral">Chaparral</option>
+												<option value="Coello">Coello</option>
+												<option value="Coyaima">Coyaima</option>
+												<option value="Cunday">Cunday</option>
+												<option value="Dolores">Dolores</option>
+												<option value="El Espinal">El Espinal</option>
+												<option value="Falan">Falan</option>
+												<option value="Flandes">Flandes</option>
+												<option value="Fresno">Fresno</option>
+												<option value="Guamo">Guamo</option>
+												<option value="Herveo">Herveo</option>
+												<option value="Honda">Honda</option>
+												<option value="Ibagué">Ibagué</option>
+												<option value="Icononzo">Icononzo</option>
+												<option value="Lérida">Lérida</option>
+												<option value="Líbano">Líbano</option>
+												<option value="Mariquita">Mariquita</option>
+												<option value="Melgar">Melgar</option>
+												<option value="Murillo">Murillo</option>
+												<option value="Natagaima">Natagaima</option>
+												<option value="Ortega">Ortega</option>
+												<option value="Palocabildo">Palocabildo</option>
+												<option value="Piedras">Piedras</option>
+												<option value="Planadas">Planadas</option>
+												<option value="Prado">Prado</option>
+												<option value="Purificación">Purificación</option>
+												<option value="Rioblanco">Rioblanco</option>
+												<option value="Roncesvalles">Roncesvalles</option>
+												<option value="Rovira">Rovira</option>
+												<option value="Saldaña">Saldaña</option>
+												<option value="San Antonio">San Antonio</option>
+												<option value="San Luis">San Luis</option>
+												<option value="Santa Isabel">Santa Isabel</option>
+												<option value="Suárez">Suárez</option>
+												<option value="Valle de San Juan">Valle de San Juan</option>
+												<option value="Venadillo">Venadillo</option>
+												<option value="Villahermosa">Villahermosa</option>
+												<option value="Villarrica">Villarrica</option>
+												<!-- Valle del Cauca -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Valle del Cauca</option>
+
+												<option value="Alcalá">Alcalá</option>
+												<option value="Andalucía">Andalucía</option>
+												<option value="Ansermanuevo">Ansermanuevo</option>
+												<option value="Argelia">Argelia</option>
+												<option value="Bolívar">Bolívar</option>
+												<option value="Buenaventura">Buenaventura</option>
+												<option value="Buga">Buga</option>
+												<option value="Bugalagrande">Bugalagrande</option>
+												<option value="Caicedonia">Caicedonia</option>
+												<option value="Cali">Cali</option>
+												<option value="Calima">Calima</option>
+												<option value="Candelaria">Candelaria</option>
+												<option value="Cartago">Cartago</option>
+												<option value="Dagua">Dagua</option>
+												<option value="El Águila">El Águila</option>
+												<option value="El Cairo">El Cairo</option>
+												<option value="El Cerrito">El Cerrito</option>
+												<option value="El Dovio">El Dovio</option>
+												<option value="Florida">Florida</option>
+												<option value="Ginebra">Ginebra</option>
+												<option value="Guacarí">Guacarí</option>
+												<option value="Jamundí">Jamundí</option>
+												<option value="La Cumbre">La Cumbre</option>
+												<option value="La Unión">La Unión</option>
+												<option value="La Victoria">La Victoria</option>
+												<option value="Obando">Obando</option>
+												<option value="Palmira">Palmira</option>
+												<option value="Pradera">Pradera</option>
+												<option value="Restrepo">Restrepo</option>
+												<option value="Riofrío">Riofrío</option>
+												<option value="Roldanillo">Roldanillo</option>
+												<option value="San Pedro">San Pedro</option>
+												<option value="Sevilla">Sevilla</option>
+												<option value="Toro">Toro</option>
+												<option value="Trujillo">Trujillo</option>
+												<option value="Tuluá">Tuluá</option>
+												<option value="Ulloa">Ulloa</option>
+												<option value="Versalles">Versalles</option>
+												<option value="Vijes">Vijes</option>
+												<option value="Yotoco">Yotoco</option>
+												<option value="Yumbo">Yumbo</option>
+												<option value="Zarzal">Zarzal</option>
+												<!-- Vaupés -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Vaupés</option>
+
+												<option value="Carurú">Carurú</option>
+												<option value="Mitú">Mitú</option>
+												<option value="Pacoa">Pacoa</option>
+												<option value="Papunahua">Papunahua</option>
+												<option value="Taraira">Taraira</option>
+												<option value="Pacuatá">Pacuatá</option>
+												<option value="Yavaraté">Yavaraté</option>
+												<!-- Vichada -->
+												<option style="background-color: rgb(206, 206, 206);" value disabled>
+													Vichada</option>
+
+												<option value="Cumaribo">Cumaribo</option>
+												<option value="La Primavera">La Primavera</option>
+												<option value="Puerto Carreño">Puerto Carreño</option>
+												<option value="Santa Rosalía">Santa Rosalía</option>
+
+
+											</select>
+
+										</div>
+									</div>
+
+
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Zona residencial</p>
+											<select id="zona_residencial" class="default-select  form-control wide">
+												<option value="" disabled="" selected="">Seleccione Zona residencial
+												</option>
+											</select>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Lugar de nacimiento</h4>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">País de nacimiento<i style="color: #197BC2;">*</i></p>
+											<select id="pais_nacimiento" class="default-select  form-control wide">
+												<option value="" disabled="" selected="">Seleccione país</option>
+												<option value="afganistan">Afganistán</option>
+												<option value="albania">Albania</option>
+												<option value="argelia">Argelia</option>
+												<option value="andorra">Andorra</option>
+												<option value="angola">Angola</option>
+												<option value="antigua_y_barbuda">Antigua y Barbuda</option>
+												<option value="argentina">Argentina</option>
+												<option value="armenia">Armenia</option>
+												<option value="australia">Australia</option>
+												<option value="austria">Austria</option>
+												<option value="azerbaiyan">Azerbaiyán</option>
+												<option value="bahamas">Bahamas</option>
+												<option value="bahrein">Baréin</option>
+												<option value="bangladesh">Bangladesh</option>
+												<option value="barbados">Barbados</option>
+												<option value="belarus">Bielorrusia</option>
+												<option value="belgica">Bélgica</option>
+												<option value="belice">Belice</option>
+												<option value="benin">Benín</option>
+												<option value="butan">Bután</option>
+												<option value="bolivia">Bolivia</option>
+												<option value="bosnia_y_herzegovina">Bosnia y Herzegovina</option>
+												<option value="botswana">Botsuana</option>
+												<option value="brasil">Brasil</option>
+												<option value="brunei">Brunéi</option>
+												<option value="bulgaria">Bulgaria</option>
+												<option value="burkina_faso">Burkina Faso</option>
+												<option value="burundi">Burundi</option>
+												<option value="cabo_verde">Cabo Verde</option>
+												<option value="camboya">Camboya</option>
+												<option value="camerun">Camerún</option>
+												<option value="canada">Canadá</option>
+												<option value="catar">Catar</option>
+												<option value="chad">Chad</option>
+												<option value="chile">Chile</option>
+												<option value="china">China</option>
+												<option value="chipre">Chipre</option>
+												<option value="colombia">Colombia</option>
+												<option value="comoras">Comoras</option>
+												<option value="congo">Congo</option>
+												<option value="corea_del_norte">Corea del Norte</option>
+												<option value="corea_del_sur">Corea del Sur</option>
+												<option value="costa_de_marfil">Costa de Marfil</option>
+												<option value="costa_rica">Costa Rica</option>
+												<option value="croacia">Croacia</option>
+												<option value="cuba">Cuba</option>
+												<option value="dinamarca">Dinamarca</option>
+												<option value="dominica">Dominica</option>
+												<option value="ecuador">Ecuador</option>
+												<option value="egipto">Egipto</option>
+												<option value="el_salvador">El Salvador</option>
+												<option value="emiratos_arabes_unidos">Emiratos Árabes Unidos</option>
+												<option value="eritrea">Eritrea</option>
+												<option value="eslovaquia">Eslovaquia</option>
+												<option value="eslovenia">Eslovenia</option>
+												<option value="espana">España</option>
+												<option value="estados_unidos">Estados Unidos</option>
+												<option value="estonia">Estonia</option>
+												<option value="etiopia">Etiopía</option>
+												<option value="fiyi">Fiyi</option>
+												<option value="filipinas">Filipinas</option>
+												<option value="finlandia">Finlandia</option>
+												<option value="francia">Francia</option>
+												<option value="gabon">Gabón</option>
+												<option value="gambia">Gambia</option>
+												<option value="georgia">Georgia</option>
+												<option value="ghana">Ghana</option>
+												<option value="grecia">Grecia</option>
+												<option value="granada">Granada</option>
+												<option value="guatemala">Guatemala</option>
+												<option value="guinea">Guinea</option>
+												<option value="guinea_bisau">Guinea-Bisáu</option>
+												<option value="guinea_ecuatorial">Guinea Ecuatorial</option>
+												<option value="guyana">Guyana</option>
+												<option value="haiti">Haití</option>
+												<option value="honduras">Honduras</option>
+												<option value="hungria">Hungría</option>
+												<option value="india">India</option>
+												<option value="indonesia">Indonesia</option>
+												<option value="irak">Irak</option>
+												<option value="iran">Irán</option>
+												<option value="irlanda">Irlanda</option>
+												<option value="islandia">Islandia</option>
+												<option value="islas_marshall">Islas Marshall</option>
+												<option value="islas_salomon">Islas Salomón</option>
+												<option value="israel">Israel</option>
+												<option value="italia">Italia</option>
+												<option value="jamaica">Jamaica</option>
+												<option value="japon">Japón</option>
+												<option value="jordania">Jordania</option>
+												<option value="kazajistan">Kazajistán</option>
+												<option value="kenia">Kenia</option>
+												<option value="kirguistan">Kirguistán</option>
+												<option value="kiribati">Kiribati</option>
+												<option value="kosovo">Kosovo</option>
+												<option value="kuwait">Kuwait</option>
+												<option value="laos">Laos</option>
+												<option value="letonia">Letonia</option>
+												<option value="líbano">Líbano</option>
+												<option value="lesoto">Lesoto</option>
+												<option value="liberia">Liberia</option>
+												<option value="libia">Libia</option>
+												<option value="liechtenstein">Liechtenstein</option>
+												<option value="lituania">Lituania</option>
+												<option value="luxemburgo">Luxemburgo</option>
+												<option value="madagascar">Madagascar</option>
+												<option value="malasia">Malasia</option>
+												<option value="malaui">Malaui</option>
+												<option value="maldivas">Maldivas</option>
+												<option value="mali">Malí</option>
+												<option value="malta">Malta</option>
+												<option value="marruecos">Marruecos</option>
+												<option value="mauricio">Mauricio</option>
+												<option value="mauritania">Mauritania</option>
+												<option value="mexico">México</option>
+												<option value="micronesia">Micronesia</option>
+												<option value="moldavia">Moldavia</option>
+												<option value="mónaco">Mónaco</option>
+												<option value="mongolia">Mongolia</option>
+												<option value="montenegro">Montenegro</option>
+												<option value="mozambique">Mozambique</option>
+												<option value="myanmar">Myanmar</option>
+												<option value="namibia">Namibia</option>
+												<option value="nauru">Nauru</option>
+												<option value="nepal">Nepal</option>
+												<option value="nicaragua">Nicaragua</option>
+												<option value="niger">Níger</option>
+												<option value="nigeria">Nigeria</option>
+												<option value="noruega">Noruega</option>
+												<option value="nueva_zelanda">Nueva Zelanda</option>
+												<option value="oman">Omán</option>
+												<option value="paises_bajos">Países Bajos</option>
+												<option value="pakistan">Pakistán</option>
+												<option value="palaos">Palaos</option>
+												<option value="panama">Panamá</option>
+												<option value="papua_nueva_guinea">Papúa Nueva Guinea</option>
+												<option value="paraguay">Paraguay</option>
+												<option value="peru">Perú</option>
+												<option value="polonia">Polonia</option>
+												<option value="portugal">Portugal</option>
+												<option value="qatar">Qatar</option>
+												<option value="reino_unido">Reino Unido</option>
+												<option value="republica_centroafricana">República Centroafricana
+												</option>
+												<option value="republica_checa">República Checa</option>
+												<option value="republica_dominicana">República Dominicana</option>
+												<option value="ruanda">Ruanda</option>
+												<option value="rumania">Rumania</option>
+												<option value="rusia">Rusia</option>
+												<option value="samoa">Samoa</option>
+												<option value="san_cristobal_y_nieves">San Cristóbal y Nieves</option>
+												<option value="san_marino">San Marino</option>
+												<option value="san_vicente_y_las_granadinas">San Vicente y las
+													Granadinas</option>
+												<option value="santa_lucia">Santa Lucía</option>
+												<option value="santo_tome_y_principe">Santo Tomé y Príncipe</option>
+												<option value="senegal">Senegal</option>
+												<option value="serbia">Serbia</option>
+												<option value="seychelles">Seychelles</option>
+												<option value="sierra_leona">Sierra Leona</option>
+												<option value="singapur">Singapur</option>
+												<option value="siria">Siria</option>
+												<option value="somalia">Somalia</option>
+												<option value="sri_lanka">Sri Lanka</option>
+												<option value="sudafrica">Sudáfrica</option>
+												<option value="sudan">Sudán</option>
+												<option value="sudán_del_sur">Sudán del Sur</option>
+												<option value="suecia">Suecia</option>
+												<option value="suiza">Suiza</option>
+												<option value="surinam">Surinam</option>
+												<option value="tailandia">Tailandia</option>
+												<option value="tanzania">Tanzania</option>
+												<option value="tayikistan">Tayikistán</option>
+												<option value="timor_oriental">Timor Oriental</option>
+												<option value="togo">Togo</option>
+												<option value="tonga">Tonga</option>
+												<option value="trinidad_y_tobago">Trinidad y Tobago</option>
+												<option value="tunisia">Túnez</option>
+												<option value="turquia">Turquía</option>
+												<option value="turkmenistan">Turkmenistán</option>
+												<option value="tuvalu">Tuvalu</option>
+												<option value="ucrania">Ucrania</option>
+												<option value="uganda">Uganda</option>
+												<option value="uruguay">Uruguay</option>
+												<option value="uzbekistan">Uzbekistán</option>
+												<option value="vanuatu">Vanuatu</option>
+												<option value="venezuela">Venezuela</option>
+												<option value="vietnam">Vietnam</option>
+												<option value="yemen">Yemen</option>
+												<option value="yibuti">Yibuti</option>
+												<option value="zambia">Zambia</option>
+												<option value="zimbabue">Zimbabue</option>
+
+
+											</select>
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Estado/Región<i style="color: #197BC2;">*</i></p>
+											<input id="estado_nacimiento" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Ciudad<i style="color: #197BC2;">*</i></p>
+											<input id="ciudad_nacimiento" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Nacionalidad<i style="color: #197BC2;">*</i></p>
+											<input id="nacionalidad" type="text" class="form-control">
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Datos adicionales</h4>
+							</div>
+							<div class="card-body">
+								<div class="row">
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Correo personal<i style="color: #197BC2;">*</i></p>
+											<input id="correo_personal" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Profesión<i style="color: #197BC2;">*</i></p>
+											<input id="profesion" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3 mb-3">
+										<div class="example">
+											<p class="mb-1">Ocupación<i style="color: #197BC2;">*</i></p>
+											<input id="ocupacion" type="text" class="form-control">
+
+										</div>
+									</div>
+									<div class="col-xl-3">
+										<div class="example">
+											<p class="mb-1">Empresa<i style="color: #197BC2;">*</i></p>
+											<input disabled id="empresa" type="text" class="form-control">
+
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="card-body" style="display: flex;justify-content: right">
+						<button style="margin-right: 10px;" type="button" class="btn btn-primary">ACTUALIZAR</button>
+						<button type="button" class="btn btn-dark">CANCELAR</button>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--**********************************
+            Content body end
+        ***********************************-->
+
+
+		<!--**********************************
+            Footer start
+        ***********************************-->
+		<div class="footer">
+			<div class="copyright">
+				<p>© 2026 Copyright <a href="http://numart.com.co/" target="_blank">Numart</a></p>
+			</div>
+		</div>
+		<!--**********************************
+            Footer end
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+		<!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+
+	</div>
+	<!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+	<!--**********************************
+        Scripts
+    ***********************************-->
+	<!-- Required vendors -->
+	<script src="/files/vendor/global/global.min.js"></script>
+	<script src="/files/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="/files/vendor/chart-js/chart.bundle.min.js"></script>
+	<script src="/files/js/custom.min.js"></script>
+	<script src="/files/js/deznav-init.js"></script>
+	<!-- Apex Chart -->
+	<script src="/files/vendor/apexchart/apexchart.js"></script>
+
+
+
+	<!-- Daterangepicker -->
+	<!-- momment js is must -->
+	<script src="/files/vendor/moment/moment.min.js"></script>
+	<script src="/files/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<!-- clockpicker -->
+	<script src="/files/vendor/clockpicker/js/bootstrap-clockpicker.min.js"></script>
+	<!-- asColorPicker -->
+	<script src="/files/vendor/jquery-asColor/jquery-asColor.min.js"></script>
+	<script src="/files/vendor/jquery-asGradient/jquery-asGradient.min.js"></script>
+	<script src="/files/vendor/jquery-asColorPicker/js/jquery-asColorPicker.min.js"></script>
+	<!-- Material color picker -->
+	<script src="/files/vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+	<!-- pickdate -->
+	<script src="/files/vendor/pickadate/picker.js"></script>
+	<script src="/files/vendor/pickadate/picker.time.js"></script>
+	<script src="/files/vendor/pickadate/picker.date.js"></script>
+
+
+
+	<!-- Daterangepicker -->
+	<script src="/files/js/plugins-init/bs-daterange-picker-init.js"></script>
+	<!-- Clockpicker init -->
+	<script src="/files/js/plugins-init/clock-picker-init.js"></script>
+	<!-- asColorPicker init -->
+	<script src="/files/js/plugins-init/jquery-asColorPicker.init.js"></script>
+	<!-- Material color picker init -->
+	<script src="/files/js/plugins-init/material-date-picker-init.js"></script>
+	<!-- Pickdate -->
+	<script src="/files/js/plugins-init/pickadate-init.js"></script>
+
+	<script src="/files/js/numart/main.js"></script>
+
+
+	<!--Rellenar información-->
+	<script>
+		returnConfidencialInfo(localStorage.getItem("token"), JSON.parse(localStorage.getItem('userInfo')).codigo_centro, "myInfoList")
+			.then(data => {
+				const permisos_pagina = JSON.parse(data.permisos)
+				if (!permisos_pagina.autorizaciones["mi-espacio"]["mis_datos"]["informacion-personal"]["editar_nombres"]) {
+					document.getElementById("primer_nombre").disabled = true
+					document.getElementById("segundo_nombre").disabled = true
+					document.getElementById("primer_apellido").disabled = true
+					document.getElementById("segundo_apellido").disabled = true
+				}
+				if (!permisos_pagina.autorizaciones["mi-espacio"]["mis_datos"]["informacion-personal"]["editar_documento"]) {
+					document.getElementById("documento").disabled = true
+					document.getElementById("numero_documento").disabled = true
+				}
+
+				document.getElementById("primer_nombre").value = data.data[0].primer_nombre
+				document.getElementById("segundo_nombre").value = data.data[0].segundo_nombre
+				document.getElementById("primer_apellido").value = data.data[0].primer_apellido
+				document.getElementById("segundo_apellido").value = data.data[0].segundo_apellido
+				console.log(data.data[0].sexo)
+				$('#sexo').val(data.data[0].sexo)
+				$('#documento').val(data.data[0].documento)
+
+				$('#sexo').selectpicker('refresh');
+				$('#documento').selectpicker('refresh');
+				document.getElementById("numero_documento").value = data.data[0].numero_documento
+				document.getElementById("fecha_de_nacimiento").value = data.data[0].fecha_de_nacimiento
+
+				document.getElementById("telefono_emergencia").value = data.data[0].telefono_emergencia
+				document.getElementById("movil1").value = data.data[0].movil
+				document.getElementById("movil2").value = data.data[0].movil2
+				document.getElementById("estado_civil").value = data.data[0].estado_civil
+
+
+
+
+				document.getElementById("direccion").value = data.data[0].direccion
+				document.getElementById("barrio").value = data.data[0].barrio
+				document.getElementById("codigo_postal").value = data.data[0].codigo_postal
+				$('#pais').val(data.data[0].pais)
+				$('#pais').selectpicker('refresh');
+				$('#estado_residencia').val(data.data[0].estado_residencia)
+				$('#estado_residencia').selectpicker('refresh');
+				$('#municipio').val(data.data[0].municipio)
+				$('#municipio').selectpicker('refresh');
+				$('#zona_residencial').val(data.data[0].municipio)
+				$('#zona_residencial').selectpicker('refresh');
+
+
+
+
+				$('#pais_nacimiento').val(data.data[0].pais_nacimiento)
+				$('#pais_nacimiento').selectpicker('refresh');
+				document.getElementById("estado_nacimiento").value = data.data[0].estado_residencia
+				document.getElementById("ciudad_nacimiento").value = data.data[0].ciudad_nacimiento
+				document.getElementById("nacionalidad").value = data.data[0].nacionalidad
+
+				document.getElementById("correo_personal").value = data.data[0].correo_personal
+				document.getElementById("profesion").value = data.data[0].profesion
+				document.getElementById("ocupacion").value = data.data[0].ocupacion
+				document.getElementById("empresa").value = data.data[0].empresa
+			})
+			.catch(err => {
+				console.error("Error:", err);
+			});
+
+	</script>
+
+</body>
+
+</html>
